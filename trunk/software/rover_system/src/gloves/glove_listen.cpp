@@ -13,6 +13,5 @@ void *glove_thread(void* arg)
 		{
 		receive_and_update(&Left_Hand);
 		receive_and_update(&Right_Hand);
-		Right_Hand.print();
 		}
 	}
