@@ -29,7 +29,7 @@ mobil_class::mobil_class (void)
 
 mobil_class::~mobil_class (void)
 {
-  pthread_mutex_destroy (&mobil_lock);
+  pthread_mutex_destroy (&mobil_lock); //required to properly deconstruct
 }
 
 void mobil_class::get_devices(device_t *&devices)
@@ -68,8 +68,7 @@ bool mobil_class::trylock (void)
     }
 }
 
-
-bool mobil_class::lock (void)
+bool mobil_class::lock (void) //ensures following threads are atomic
 {
   pthread_mutex_lock (&mobil_lock);
 }
