@@ -21,9 +21,7 @@ enum device_id
 			SAMPLE_DEVICE_FEEDBACK =0xC
 			};
 
-
-unsigned char get_byte();
-void write_packet(	unsigned char device, 
+void write_packet(	unsigned char device,
 					unsigned char mode, 
 					unsigned char magnitude);
 				
