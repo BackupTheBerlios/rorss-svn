@@ -11,10 +11,13 @@
 mobil_class::mobil_class (void)
 {
 	int i;
-	pthread_mutex_init (&mobil_lock, NULL);
+	pthread_mutex_init (&mobil_lock, NULL);  // initializes the thread
+	// Initializes the devices.
+	// Sets values for mode and magnitude to be zero.
 	for(i=0; i<NUMDEVICES ; i++)
 		{
-		local[i].mode      = remote[i].mode      = 0;
+
+		local[i].mode      = remote[i].mode      = 0;  
 		local[i].magnitude = remote[i].magnitude = 0;
 
 		if(i >= 0x7 && i <= 0xC )                // encoders are not writable
@@ -33,9 +36,11 @@ void mobil_class::get_devices(device_t *&devices)
 {
 	static int i;
 	lock ();
+	// Assigns values for the devices array
+	// Sets the mode magnitute and whether or not its writable.
 	for(i=0; i<NUMDEVICES; i++)
 		{
-		devices[i].mode      = local[i].mode;
+		devices[i].mode      = local[i].mode;    
 		devices[i].magnitude = local[i].magnitude;
 		devices[i].writable  = local[i].writable;
 		}
@@ -50,6 +55,7 @@ void mobil_class::get_device (device_t  &device, device_id id)
 	unlock();
 }
 
+// Checks to see if command is locked, otherwise sends code somewhere else
 bool mobil_class::trylock (void)
 {
   if (pthread_mutex_trylock (&mobil_lock) != 0)
@@ -61,6 +67,7 @@ bool mobil_class::trylock (void)
       return true;
     }
 }
+
 
 bool mobil_class::lock (void)
 {
