@@ -8,6 +8,7 @@
 #include <iostream>
 #include "micro_controller_comm.h"
 #include "../system_core/system_core.h"
+#include "micro_controller_comm_thread.h"
 using namespace std;
 timeb old_time;
 timeb new_time;
