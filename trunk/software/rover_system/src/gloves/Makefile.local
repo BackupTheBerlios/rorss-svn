@@ -1,0 +1,17 @@
+CC=g++ $(FLAGS)
+LIBS=-lfglove
+PROJECTROOT=../../
+INC=-I${PROJECTROOT}
+
+all: glove_data.o
+	echo -n " $(LIBS) " >> ${PROJECTROOT}../tmp/_LIBS
+	echo -n " `pwd`/glove_data.o " >> ${PROJECTROOT}../tmp/_OBJECTS
+	echo -e "\tGlove(local) Sub-system Done."
+
+glove_data.o: glove_data.cpp
+	$(CC) $(INC) -c glove_data.cpp
+
+clean:
+	rm -f *.o
+.PHONY: all
+.SILENT:

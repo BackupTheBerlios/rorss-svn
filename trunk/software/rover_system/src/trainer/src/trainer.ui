@@ -1,0 +1,2878 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>Trainer</class>
+<widget class="QMainWindow">
+    <property name="name">
+        <cstring>Trainer</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>700</width>
+            <height>415</height>
+        </rect>
+    </property>
+    <property name="font">
+        <font>
+            <pointsize>16</pointsize>
+        </font>
+    </property>
+    <property name="caption">
+        <string>GloveTrainer</string>
+    </property>
+    <property name="icon">
+        <pixmap>glove.png</pixmap>
+    </property>
+    <widget class="QGroupBox">
+        <property name="name">
+            <cstring>LeftGroup</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>255</x>
+                <y>75</y>
+                <width>210</width>
+                <height>285</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>LeftHand</string>
+        </property>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>textLabel1</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>40</x>
+                    <y>260</y>
+                    <width>25</width>
+                    <height>18</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="text">
+                <string>Pitch</string>
+            </property>
+        </widget>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>textLabel1_4</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>115</x>
+                    <y>260</y>
+                    <width>25</width>
+                    <height>18</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="text">
+                <string>Roll</string>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>LeftFinger1Spinner</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>165</x>
+                    <y>250</y>
+                    <width>35</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>LeftFinger2Spinner</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>130</x>
+                    <y>180</y>
+                    <width>35</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>LeftFinger3Spinner</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>90</x>
+                    <y>180</y>
+                    <width>35</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>LeftFinger4Spinner</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>50</x>
+                    <y>180</y>
+                    <width>35</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>LeftFinger5Spinner</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>180</y>
+                    <width>35</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>LeftPitchSpinner</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>5</x>
+                    <y>260</y>
+                    <width>35</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+            <property name="value">
+                <number>50</number>
+            </property>
+        </widget>
+        <widget class="QDial">
+            <property name="name">
+                <cstring>LeftRollDial</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>85</x>
+                    <y>210</y>
+                    <width>50</width>
+                    <height>50</height>
+                </rect>
+            </property>
+            <property name="minValue">
+                <number>0</number>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="value">
+                <number>50</number>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>LeftRollSpinner</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>80</x>
+                    <y>260</y>
+                    <width>35</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+            <property name="value">
+                <number>50</number>
+            </property>
+        </widget>
+        <widget class="QDial">
+            <property name="name">
+                <cstring>LeftPitchDial</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>210</y>
+                    <width>50</width>
+                    <height>50</height>
+                </rect>
+            </property>
+            <property name="minValue">
+                <number>0</number>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="value">
+                <number>50</number>
+            </property>
+        </widget>
+        <widget class="QSlider">
+            <property name="name">
+                <cstring>LeftFinger1Slider</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>170</x>
+                    <y>135</y>
+                    <width>16</width>
+                    <height>110</height>
+                </rect>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+        </widget>
+        <widget class="QSlider">
+            <property name="name">
+                <cstring>LeftFinger4Slider</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>55</x>
+                    <y>25</y>
+                    <width>16</width>
+                    <height>151</height>
+                </rect>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+        </widget>
+        <widget class="QSlider">
+            <property name="name">
+                <cstring>LeftFinger3Slider</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>95</x>
+                    <y>23</y>
+                    <width>16</width>
+                    <height>151</height>
+                </rect>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+        </widget>
+        <widget class="QSlider">
+            <property name="name">
+                <cstring>LeftFinger5Slider</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>15</x>
+                    <y>25</y>
+                    <width>16</width>
+                    <height>151</height>
+                </rect>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>pushButton26_2_2</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>170</x>
+                    <y>25</y>
+                    <width>30</width>
+                    <height>16</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Clearlyu Alternate Glyphs</family>
+                    <pointsize>9</pointsize>
+                </font>
+            </property>
+            <property name="text">
+                <string>Reset</string>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Reset Unimportant markers</string>
+            </property>
+        </widget>
+        <widget class="QSlider">
+            <property name="name">
+                <cstring>LeftFinger2Slider</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>135</x>
+                    <y>25</y>
+                    <width>16</width>
+                    <height>151</height>
+                </rect>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>pushButton12_4</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>130</x>
+                    <y>165</y>
+                    <width>10</width>
+                    <height>10</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="toggleButton">
+                <bool>true</bool>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Mark as unimportant</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>pushButton12_3</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>90</x>
+                    <y>165</y>
+                    <width>10</width>
+                    <height>10</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="toggleButton">
+                <bool>true</bool>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Mark as unimportant</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>pushButton12_2</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>50</x>
+                    <y>165</y>
+                    <width>10</width>
+                    <height>10</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="toggleButton">
+                <bool>true</bool>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Mark as unimportant</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>pushButton12</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>165</y>
+                    <width>10</width>
+                    <height>10</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="toggleButton">
+                <bool>true</bool>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Mark as unimportant</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>pushButton12_6</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>5</x>
+                    <y>245</y>
+                    <width>10</width>
+                    <height>10</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="toggleButton">
+                <bool>true</bool>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Mark as unimportant</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>pushButton12_7</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>80</x>
+                    <y>245</y>
+                    <width>10</width>
+                    <height>10</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="toggleButton">
+                <bool>true</bool>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Mark as unimportant</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>pushButton12_5</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>165</x>
+                    <y>235</y>
+                    <width>10</width>
+                    <height>10</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="toggleButton">
+                <bool>true</bool>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Mark as unimportant</string>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QGroupBox">
+        <property name="name">
+            <cstring>OutputGroup</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>5</x>
+                <y>75</y>
+                <width>245</width>
+                <height>285</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>Output</string>
+        </property>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>Category4Check</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>175</y>
+                    <width>16</width>
+                    <height>16</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="checked">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>Category3Check</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>150</y>
+                    <width>16</width>
+                    <height>16</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="checked">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>Category2Check</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>125</y>
+                    <width>16</width>
+                    <height>16</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="checked">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="QLineEdit">
+            <property name="name">
+                <cstring>Category4Text</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>30</x>
+                    <y>175</y>
+                    <width>110</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+        </widget>
+        <widget class="QLineEdit">
+            <property name="name">
+                <cstring>Category2Text</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>30</x>
+                    <y>125</y>
+                    <width>110</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+        </widget>
+        <widget class="QLineEdit">
+            <property name="name">
+                <cstring>Category7Text</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>30</x>
+                    <y>250</y>
+                    <width>110</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+        </widget>
+        <widget class="QLineEdit">
+            <property name="name">
+                <cstring>Category5Text</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>30</x>
+                    <y>200</y>
+                    <width>110</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+        </widget>
+        <widget class="QLineEdit">
+            <property name="name">
+                <cstring>Category6Text</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>30</x>
+                    <y>225</y>
+                    <width>110</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>Category7Check</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>250</y>
+                    <width>16</width>
+                    <height>16</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="checked">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>Category6Check</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>225</y>
+                    <width>16</width>
+                    <height>16</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="checked">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>Category5Check</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>200</y>
+                    <width>16</width>
+                    <height>16</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="checked">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="QLineEdit">
+            <property name="name">
+                <cstring>Category3Text</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>30</x>
+                    <y>150</y>
+                    <width>110</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>Category2Spin</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>145</x>
+                    <y>125</y>
+                    <width>40</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>Category3Spin</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>145</x>
+                    <y>150</y>
+                    <width>40</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>Category4Spin</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>145</x>
+                    <y>175</y>
+                    <width>40</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>Category5Spin</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>145</x>
+                    <y>200</y>
+                    <width>40</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>Category6Spin</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>145</x>
+                    <y>225</y>
+                    <width>40</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>Category7Spin</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>145</x>
+                    <y>250</y>
+                    <width>40</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>Category1Check</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>100</y>
+                    <width>16</width>
+                    <height>16</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="checked">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>Category2LED</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>185</x>
+                    <y>125</y>
+                    <width>20</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="paletteBackgroundColor">
+                <color>
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>Category3LED</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>185</x>
+                    <y>150</y>
+                    <width>20</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="paletteBackgroundColor">
+                <color>
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>Category4LED</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>185</x>
+                    <y>175</y>
+                    <width>20</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="paletteBackgroundColor">
+                <color>
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>Category5LED</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>185</x>
+                    <y>200</y>
+                    <width>20</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="paletteBackgroundColor">
+                <color>
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>Category6LED</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>185</x>
+                    <y>225</y>
+                    <width>20</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="paletteBackgroundColor">
+                <color>
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>Category7LED</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>185</x>
+                    <y>250</y>
+                    <width>20</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="paletteBackgroundColor">
+                <color>
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>Category1Spin</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>145</x>
+                    <y>100</y>
+                    <width>40</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+            <property name="value">
+                <number>0</number>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>ClearValuesButton</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>145</x>
+                    <y>75</y>
+                    <width>60</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="text">
+                <string>ClearValues</string>
+            </property>
+        </widget>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>groupBox5</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>15</x>
+                    <y>25</y>
+                    <width>125</width>
+                    <height>45</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="title">
+                <string>category</string>
+            </property>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>Category</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>5</x>
+                        <y>15</y>
+                        <width>115</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Category </string>
+                </property>
+                <property name="textFormat">
+                    <enum>AutoText</enum>
+                </property>
+                <property name="alignment">
+                    <set>AlignCenter</set>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>Category1LED</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>185</x>
+                    <y>100</y>
+                    <width>20</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="paletteBackgroundColor">
+                <color>
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+        </widget>
+        <widget class="QLineEdit">
+            <property name="name">
+                <cstring>Category1Text</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>30</x>
+                    <y>100</y>
+                    <width>110</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QGroupBox">
+        <property name="name">
+            <cstring>InputGroup</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>120</x>
+                <y>0</y>
+                <width>575</width>
+                <height>75</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>Input</string>
+        </property>
+        <widget class="QRadioButton">
+            <property name="name">
+                <cstring>GloveRadio</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>45</y>
+                    <width>70</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>14</pointsize>
+                </font>
+            </property>
+            <property name="text">
+                <string>Gloves</string>
+            </property>
+        </widget>
+        <widget class="QRadioButton">
+            <property name="name">
+                <cstring>UiRadio</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>25</y>
+                    <width>50</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>14</pointsize>
+                </font>
+            </property>
+            <property name="text">
+                <string>UI</string>
+            </property>
+            <property name="checked">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="Line">
+            <property name="name">
+                <cstring>line1</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>80</x>
+                    <y>25</y>
+                    <width>10</width>
+                    <height>41</height>
+                </rect>
+            </property>
+            <property name="frameShape">
+                <enum>VLine</enum>
+            </property>
+            <property name="frameShadow">
+                <enum>Sunken</enum>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>ContinuousEvaluationCheck</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>345</x>
+                    <y>45</y>
+                    <width>180</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>14</pointsize>
+                </font>
+            </property>
+            <property name="text">
+                <string>Continuous Evaluation</string>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>spinBox22</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>120</x>
+                    <y>45</y>
+                    <width>50</width>
+                    <height>18</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>14</pointsize>
+                </font>
+            </property>
+        </widget>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>textLabel1_5</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>95</x>
+                    <y>15</y>
+                    <width>80</width>
+                    <height>26</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Input Fuzz</string>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>CounterExamplesCheck</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>345</x>
+                    <y>20</y>
+                    <width>200</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>14</pointsize>
+                </font>
+            </property>
+            <property name="text">
+                <string>Generate Counter Examples</string>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Use the toggle buttons beside each input to mark as irellevant input to be considered in counter examples</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>TrainEvaluateButton</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>185</x>
+                    <y>20</y>
+                    <width>150</width>
+                    <height>45</height>
+                </rect>
+            </property>
+            <property name="paletteBackgroundColor">
+                <color>
+                    <red>228</red>
+                    <green>228</green>
+                    <blue>228</blue>
+                </color>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Courier [Adobe]</family>
+                    <pointsize>26</pointsize>
+                </font>
+            </property>
+            <property name="text">
+                <string>Train</string>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>EvaluateButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>5</x>
+                <y>40</y>
+                <width>105</width>
+                <height>25</height>
+            </rect>
+        </property>
+        <property name="font">
+            <font>
+            </font>
+        </property>
+        <property name="text">
+            <string>Evaluate</string>
+        </property>
+        <property name="toggleButton">
+            <bool>true</bool>
+        </property>
+        <property name="default">
+            <bool>false</bool>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>TrainButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>5</x>
+                <y>15</y>
+                <width>105</width>
+                <height>25</height>
+            </rect>
+        </property>
+        <property name="font">
+            <font>
+            </font>
+        </property>
+        <property name="text">
+            <string>Train</string>
+        </property>
+        <property name="toggleButton">
+            <bool>true</bool>
+        </property>
+        <property name="on">
+            <bool>true</bool>
+        </property>
+        <property name="flat">
+            <bool>false</bool>
+        </property>
+    </widget>
+    <widget class="QGroupBox">
+        <property name="name">
+            <cstring>RightGroup</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>481</x>
+                <y>75</y>
+                <width>215</width>
+                <height>285</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>RightHand</string>
+        </property>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>textLabel1_3</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>170</x>
+                    <y>260</y>
+                    <width>25</width>
+                    <height>18</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="text">
+                <string>Roll</string>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>RightFinger1Spinner</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>250</y>
+                    <width>35</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>RightFinger2Spinner</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>55</x>
+                    <y>180</y>
+                    <width>35</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>RightFinger3Spinner</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>95</x>
+                    <y>180</y>
+                    <width>35</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>RightFinger4Spinner</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>135</x>
+                    <y>180</y>
+                    <width>35</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>RightFinger5Spinner</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>175</x>
+                    <y>180</y>
+                    <width>35</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+        </widget>
+        <widget class="QDial">
+            <property name="name">
+                <cstring>RightRollDial</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>140</x>
+                    <y>210</y>
+                    <width>50</width>
+                    <height>50</height>
+                </rect>
+            </property>
+            <property name="minValue">
+                <number>0</number>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="value">
+                <number>50</number>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>RightRollSpinner</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>135</x>
+                    <y>260</y>
+                    <width>35</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+            <property name="value">
+                <number>50</number>
+            </property>
+        </widget>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>textLabel1_2</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>95</x>
+                    <y>260</y>
+                    <width>25</width>
+                    <height>18</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="text">
+                <string>Pitch</string>
+            </property>
+        </widget>
+        <widget class="QSlider">
+            <property name="name">
+                <cstring>RightFinger2Slider</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>60</x>
+                    <y>25</y>
+                    <width>16</width>
+                    <height>151</height>
+                </rect>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+        </widget>
+        <widget class="QSlider">
+            <property name="name">
+                <cstring>RightFinger3Slider</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>100</x>
+                    <y>25</y>
+                    <width>16</width>
+                    <height>151</height>
+                </rect>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+        </widget>
+        <widget class="QSlider">
+            <property name="name">
+                <cstring>RightFinger4Slider</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>140</x>
+                    <y>25</y>
+                    <width>16</width>
+                    <height>151</height>
+                </rect>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+        </widget>
+        <widget class="QSlider">
+            <property name="name">
+                <cstring>RightFinger5Slider</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>180</x>
+                    <y>25</y>
+                    <width>16</width>
+                    <height>151</height>
+                </rect>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+        </widget>
+        <widget class="QSpinBox">
+            <property name="name">
+                <cstring>RightPitchSpinner</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>60</x>
+                    <y>260</y>
+                    <width>35</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Helvetica</family>
+                    <pointsize>10</pointsize>
+                </font>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="lineStep">
+                <number>5</number>
+            </property>
+            <property name="value">
+                <number>50</number>
+            </property>
+        </widget>
+        <widget class="QSlider">
+            <property name="name">
+                <cstring>RightFinger1Slider</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>135</y>
+                    <width>16</width>
+                    <height>110</height>
+                </rect>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>pushButton26_2</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>10</x>
+                    <y>25</y>
+                    <width>30</width>
+                    <height>16</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Clearlyu Alternate Glyphs</family>
+                    <pointsize>9</pointsize>
+                </font>
+            </property>
+            <property name="text">
+                <string>Reset</string>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Reset Unimportant markers</string>
+            </property>
+        </widget>
+        <widget class="QDial">
+            <property name="name">
+                <cstring>RightPitchDial</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>65</x>
+                    <y>210</y>
+                    <width>50</width>
+                    <height>50</height>
+                </rect>
+            </property>
+            <property name="minValue">
+                <number>0</number>
+            </property>
+            <property name="maxValue">
+                <number>100</number>
+            </property>
+            <property name="value">
+                <number>50</number>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>pushButton12_8</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>15</x>
+                    <y>235</y>
+                    <width>10</width>
+                    <height>10</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="toggleButton">
+                <bool>true</bool>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Mark as unimportant</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>pushButton12_10</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>60</x>
+                    <y>245</y>
+                    <width>10</width>
+                    <height>10</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="toggleButton">
+                <bool>true</bool>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Mark as unimportant</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>pushButton12_12</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>135</x>
+                    <y>245</y>
+                    <width>10</width>
+                    <height>10</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="toggleButton">
+                <bool>true</bool>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Mark as unimportant</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>pushButton12_14</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>135</x>
+                    <y>165</y>
+                    <width>10</width>
+                    <height>10</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="toggleButton">
+                <bool>true</bool>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Mark as unimportant</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>pushButton12_9</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>175</x>
+                    <y>165</y>
+                    <width>10</width>
+                    <height>10</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="toggleButton">
+                <bool>true</bool>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Mark as unimportant</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>pushButton12_11</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>95</x>
+                    <y>165</y>
+                    <width>10</width>
+                    <height>10</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="toggleButton">
+                <bool>true</bool>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Mark as unimportant</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>pushButton12_13</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>55</x>
+                    <y>165</y>
+                    <width>10</width>
+                    <height>10</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="toggleButton">
+                <bool>true</bool>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Mark as unimportant</string>
+            </property>
+        </widget>
+    </widget>
+</widget>
+<menubar>
+    <property name="name">
+        <cstring>MenuBar</cstring>
+    </property>
+    <item text="&amp;File" name="fileMenu">
+        <action name="fileNewAction"/>
+        <action name="fileSaveAction"/>
+        <action name="fileSaveAsAction"/>
+        <separator/>
+        <separator/>
+        <action name="fileExitAction"/>
+    </item>
+</menubar>
+<toolbars>
+</toolbars>
+<actions>
+    <action>
+        <property name="name">
+            <cstring>fileNewAction</cstring>
+        </property>
+        <property name="text">
+            <string>New</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;New</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+N</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileSaveAction</cstring>
+        </property>
+        <property name="text">
+            <string>Save</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Save</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+S</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileSaveAsAction</cstring>
+        </property>
+        <property name="text">
+            <string>Save As</string>
+        </property>
+        <property name="menuText">
+            <string>Save &amp;As...</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileExitAction</cstring>
+        </property>
+        <property name="text">
+            <string>Exit</string>
+        </property>
+        <property name="menuText">
+            <string>E&amp;xit</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+</actions>
+<connections>
+    <connection>
+        <sender>fileNewAction</sender>
+        <signal>activated()</signal>
+        <receiver>Trainer</receiver>
+        <slot>fileNew()</slot>
+    </connection>
+    <connection>
+        <sender>fileSaveAction</sender>
+        <signal>activated()</signal>
+        <receiver>Trainer</receiver>
+        <slot>fileSave()</slot>
+    </connection>
+    <connection>
+        <sender>fileExitAction</sender>
+        <signal>activated()</signal>
+        <receiver>Trainer</receiver>
+        <slot>fileExit()</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger5Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>LeftFinger5Slider_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger4Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>LeftFinger4Slider_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger3Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>LeftFinger3Slider_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger2Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>LeftFinger2Slider_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger1Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>LeftFinger1Slider_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger1Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>RightFinger1Slider_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger2Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>RightFinger2Slider_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger3Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>RightFinger3Slider_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger4Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>RightFinger4Slider_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger5Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>RightFinger5Slider_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger5Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>LeftFinger5Spinner_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger4Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>LeftFinger4Spinner_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger3Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>LeftFinger3Spinner_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger2Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>LeftFinger2Spinner_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger1Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>LeftFinger1Spinner_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger1Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>RightFinger1Spinner_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger2Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>RightFinger2Spinner_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger3Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>RightFinger3Spinner_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger4Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>RightFinger4Spinner_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger5Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>RightFinger5Spinner_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftPitchSpinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>LeftPitchSpinner_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftRollSpinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>LeftRollSpinner_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightPitchSpinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>RightPitchSpinner_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightRollSpinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>RightRollSpinner_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftPitchDial</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>LeftPitchDial_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftRollDial</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>LeftRollDial_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightPitchDial</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>RightPitchDial_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightRollDial</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>RightRollDial_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>UiRadio</sender>
+        <signal>clicked()</signal>
+        <receiver>Trainer</receiver>
+        <slot>UiRadio_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>GloveRadio</sender>
+        <signal>clicked()</signal>
+        <receiver>Trainer</receiver>
+        <slot>GloveRadio_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>TrainEvaluateButton</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Trainer</receiver>
+        <slot>TrainEvaluateButton_toggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>TrainEvaluateButton</sender>
+        <signal>clicked()</signal>
+        <receiver>Trainer</receiver>
+        <slot>TrainEvaluateButton_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>CounterExamplesCheck</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Trainer</receiver>
+        <slot>CounterExamplesCheck_toggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>ContinuousEvaluationCheck</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Trainer</receiver>
+        <slot>ContinuousEvaluationCheck_toggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>TrainButton</sender>
+        <signal>clicked()</signal>
+        <receiver>Trainer</receiver>
+        <slot>TrainButton_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>EvaluateButton</sender>
+        <signal>clicked()</signal>
+        <receiver>Trainer</receiver>
+        <slot>EvaluateButton_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>Category1Spin</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>Category1Spin_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>Category2Spin</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>Category2Spin_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>Category3Spin</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>Category3Spin_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>Category4Spin</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>Category4Spin_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>Category5Spin</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>Category5Spin_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>Category6Spin</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>Category6Spin_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>Category7Spin</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>Trainer</receiver>
+        <slot>Category7Spin_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>TrainButton</sender>
+        <signal>clicked()</signal>
+        <receiver>EvaluateButton</receiver>
+        <slot>toggle()</slot>
+    </connection>
+    <connection>
+        <sender>EvaluateButton</sender>
+        <signal>clicked()</signal>
+        <receiver>TrainButton</receiver>
+        <slot>toggle()</slot>
+    </connection>
+    <connection>
+        <sender>GloveRadio</sender>
+        <signal>clicked()</signal>
+        <receiver>UiRadio</receiver>
+        <slot>toggle()</slot>
+    </connection>
+    <connection>
+        <sender>UiRadio</sender>
+        <signal>clicked()</signal>
+        <receiver>GloveRadio</receiver>
+        <slot>toggle()</slot>
+    </connection>
+    <connection>
+        <sender>Category1Check</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Category1Text</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>Category1Check</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Category1Spin</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>Category2Check</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Category2Text</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>Category2Check</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Category2Spin</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>Category3Check</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Category3Spin</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>Category3Check</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Category3Text</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>Category4Check</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Category4Spin</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>Category4Check</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Category4Text</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>Category5Check</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Category5Spin</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>Category5Check</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Category5Text</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>Category6Check</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Category6Spin</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>Category6Check</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Category6Text</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>Category7Check</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Category7Spin</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>Category7Check</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Category7Text</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger1Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LeftFinger1Spinner</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger1Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LeftFinger1Slider</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger2Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LeftFinger2Spinner</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger2Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LeftFinger2Slider</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger3Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LeftFinger3Spinner</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger3Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LeftFinger3Slider</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger4Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LeftFinger4Spinner</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger4Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LeftFinger4Slider</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger5Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LeftFinger5Spinner</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftFinger5Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LeftFinger5Slider</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftPitchDial</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LeftPitchSpinner</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftPitchSpinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LeftPitchDial</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftRollDial</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LeftRollSpinner</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>LeftRollSpinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LeftRollDial</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger1Slider</sender>
+        <signal>sliderMoved(int)</signal>
+        <receiver>RightFinger1Spinner</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger1Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>RightFinger1Slider</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger2Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>RightFinger2Spinner</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger2Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>RightFinger2Slider</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger3Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>RightFinger3Spinner</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger3Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>RightFinger3Slider</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger4Slider</sender>
+        <signal>sliderMoved(int)</signal>
+        <receiver>RightFinger4Spinner</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger4Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>RightFinger4Slider</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger5Slider</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>RightFinger5Spinner</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightFinger5Spinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>RightFinger5Slider</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightPitchDial</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>RightPitchSpinner</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightPitchSpinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>RightPitchDial</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightRollDial</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>RightRollSpinner</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>RightRollSpinner</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>RightRollDial</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>EvaluateButton</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>Trainer</receiver>
+        <slot>EvaluateButton_toggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>ClearValuesButton</sender>
+        <signal>clicked()</signal>
+        <receiver>Trainer</receiver>
+        <slot>ClearValuesButton_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>Category1LED</sender>
+        <signal>clicked()</signal>
+        <receiver>Trainer</receiver>
+        <slot>Category1LED_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>Category2LED</sender>
+        <signal>clicked()</signal>
+        <receiver>Trainer</receiver>
+        <slot>Category2LED_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>Category3LED</sender>
+        <signal>clicked()</signal>
+        <receiver>Trainer</receiver>
+        <slot>Category3LED_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>Category4LED</sender>
+        <signal>clicked()</signal>
+        <receiver>Trainer</receiver>
+        <slot>Category4LED_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>Category5LED</sender>
+        <signal>clicked()</signal>
+        <receiver>Trainer</receiver>
+        <slot>Category5LED_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>Category6LED</sender>
+        <signal>clicked()</signal>
+        <receiver>Trainer</receiver>
+        <slot>Category6LED_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>Category7LED</sender>
+        <signal>clicked()</signal>
+        <receiver>Trainer</receiver>
+        <slot>Category7LED_clicked()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in declaration">iostream</include>
+    <include location="local" impldecl="in declaration">train.h</include>
+    <include location="local" impldecl="in declaration">boost/thread.hpp</include>
+    <include location="local" impldecl="in declaration">boost/bind.hpp</include>
+    <include location="local" impldecl="in declaration">../../system_core/system_core.h</include>
+    <include location="local" impldecl="in declaration">unistd.h</include>
+    <include location="local" impldecl="in declaration">qapplication.h</include>
+    <include location="local" impldecl="in implementation">qapplication.h</include>
+    <include location="local" impldecl="in implementation">trainer.ui.h</include>
+</includes>
+<variables>
+    <variable>boost::thread *GloveUpdateThread;</variable>
+</variables>
+<slots>
+    <slot>fileNew()</slot>
+    <slot>fileOpen()</slot>
+    <slot>fileSave()</slot>
+    <slot>fileExit()</slot>
+    <slot>LeftFinger5Slider_valueChanged( int )</slot>
+    <slot>LeftFinger4Slider_valueChanged( int )</slot>
+    <slot>LeftFinger3Slider_valueChanged( int )</slot>
+    <slot>LeftFinger2Slider_valueChanged( int )</slot>
+    <slot>LeftFinger1Slider_valueChanged( int )</slot>
+    <slot>RightFinger1Slider_valueChanged( int )</slot>
+    <slot>RightFinger2Slider_valueChanged( int )</slot>
+    <slot>RightFinger3Slider_valueChanged( int )</slot>
+    <slot>RightFinger4Slider_valueChanged( int )</slot>
+    <slot>RightFinger5Slider_valueChanged( int )</slot>
+    <slot>LeftFinger5Spinner_valueChanged( int )</slot>
+    <slot>LeftFinger4Spinner_valueChanged( int )</slot>
+    <slot>LeftFinger3Spinner_valueChanged( int )</slot>
+    <slot>LeftFinger2Spinner_valueChanged( int )</slot>
+    <slot>LeftFinger1Spinner_valueChanged( int )</slot>
+    <slot>RightFinger1Spinner_valueChanged( int )</slot>
+    <slot>RightFinger2Spinner_valueChanged( int )</slot>
+    <slot>RightFinger3Spinner_valueChanged( int )</slot>
+    <slot>RightFinger4Spinner_valueChanged( int )</slot>
+    <slot>RightFinger5Spinner_valueChanged( int )</slot>
+    <slot>LeftPitchSpinner_valueChanged( int )</slot>
+    <slot>LeftRollSpinner_valueChanged( int )</slot>
+    <slot>RightPitchSpinner_valueChanged( int )</slot>
+    <slot>RightRollSpinner_valueChanged( int )</slot>
+    <slot>LeftPitchDial_valueChanged( int )</slot>
+    <slot>LeftRollDial_valueChanged( int )</slot>
+    <slot>RightPitchDial_valueChanged( int )</slot>
+    <slot>RightRollDial_valueChanged( int )</slot>
+    <slot>UiRadio_clicked()</slot>
+    <slot>GloveRadio_clicked()</slot>
+    <slot>TrainEvaluateButton_toggled( bool )</slot>
+    <slot>TrainEvaluateButton_clicked()</slot>
+    <slot>CounterExamplesCheck_toggled( bool )</slot>
+    <slot>ContinuousEvaluationCheck_toggled( bool )</slot>
+    <slot>TrainButton_clicked()</slot>
+    <slot>EvaluateButton_clicked()</slot>
+    <slot>Category1Spin_valueChanged( int )</slot>
+    <slot>Category2Spin_valueChanged( int )</slot>
+    <slot>Category3Spin_valueChanged( int )</slot>
+    <slot>Category4Spin_valueChanged( int )</slot>
+    <slot>Category5Spin_valueChanged( int )</slot>
+    <slot>Category6Spin_valueChanged( int )</slot>
+    <slot>Category7Spin_valueChanged( int )</slot>
+    <slot>EvaluateButton_toggled( bool )</slot>
+    <slot>ClearValuesButton_clicked()</slot>
+    <slot>Category1LED_clicked()</slot>
+    <slot>Category2LED_clicked()</slot>
+    <slot>Category3LED_clicked()</slot>
+    <slot>Category4LED_clicked()</slot>
+    <slot>Category5LED_clicked()</slot>
+    <slot>Category6LED_clicked()</slot>
+    <slot>Category7LED_clicked()</slot>
+</slots>
+<functions>
+    <function>init()</function>
+    <function access="protected">GloveUpdateThreadFunction()</function>
+    <function access="protected">CategoryUpdate()</function>
+    <function access="protected">InputUpdate()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>
