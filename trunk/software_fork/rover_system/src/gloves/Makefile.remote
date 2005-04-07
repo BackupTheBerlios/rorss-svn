@@ -1,0 +1,20 @@
+CC=g++   $(FLAGS) 
+LIBS=
+PROJECTROOT=../../
+INC=-I${PROJECTROOT}
+
+all: socket_thread.o 
+	echo -n " `pwd`/socket_thread.o " >> ${PROJECTROOT}../tmp/_OBJECTS
+	echo "Glove_tcp Done."
+
+socket_thread.o: socket_thread.cpp
+	$(CC) -c socket_thread.cpp
+
+remote_glove.o: remote_glove.cpp
+	$(CC) -c remote_glove.cpp
+
+clean:
+	rm -f *.o
+
+.PHONY: all
+

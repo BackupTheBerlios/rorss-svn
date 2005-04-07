@@ -1,0 +1,24 @@
+CC=g++  $(FLAGS)
+PROJECTROOT=../
+LIBS=
+
+all: local
+	echo "Gloves Sub-system Done."
+
+local: 
+	echo -e "\tLocal Gloves....."
+	cd local && make
+	
+
+remote: 
+	echo -e "\tRemote Gloves....  "
+	cd remote && make 
+
+clean:
+	rm -f *.o
+	cd local  && make clean
+	cd remote && make clean
+	echo "Cleaned Gloves Sub-system"
+
+.PHONY: all local remote
+.SILENT:
