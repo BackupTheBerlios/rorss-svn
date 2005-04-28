@@ -161,9 +161,9 @@ void *write_thread(void *arg)
 					{
 							//cout<<"Difference detected in device "<<i<<endl;
 							//cout<<"Got     mode="<<(int)micro_controller_comm.remote[i].mode<<"\t  mag="<<
-													(int)micro_controller_comm.remote[i].magnitude<<endl;
+							//						(int)micro_controller_comm.remote[i].magnitude<<endl;
 							//cout<<"Sending mode="<<(int)micro_controller_comm.local[i].mode<< "\t  mag="<<
-												(int)micro_controller_comm.local[i].magnitude<<endl<<endl;
+							//					(int)micro_controller_comm.local[i].magnitude<<endl<<endl;
 
 							epoch++; // Debugging variable to find out the rate of packet transmission
 							

@@ -2,7 +2,7 @@ CC=g++  $(FLAGS)
 PROJECTROOT=../
 LIBS=
 
-all: interpreter neural_network command.o  
+all: interpreter command.o  
 	echo -n " $(LIBS) "         >> ${PROJECTROOT}../tmp/_LIBS
 	echo -n " `pwd`/command.o " >> ${PROJECTROOT}../tmp/_OBJECTS
 	echo "Command Sub-system Done."

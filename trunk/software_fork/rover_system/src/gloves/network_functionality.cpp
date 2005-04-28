@@ -16,8 +16,8 @@
 #define null 0
 #define TRUE  1
 #define FALSE 0
-#define DEFAULT_PORT=4444
-#define DEFAULT_ADDRESS="127.0.0.1"
+#define DEFAULT_PORT 4444
+#define DEFAULT_ADDRESS "127.0.0.1"
 
 
 
@@ -62,9 +62,9 @@ void remote_initialize_connection()
 	{
 	using namespace remote_tcp_glove_ns;
 
-	char string_port[F_NAME_LEN]="";
-	char string_address[F_NAME_LEN]="";
-	char default_address[]=DEFAULT_ADDRESS;
+	char string_port[F_NAME_LEN] = "";
+	char string_address[F_NAME_LEN] = "";
+	char default_address[] = DEFAULT_ADDRESS;
 	char *address;
 	int  port;
 
@@ -113,7 +113,7 @@ void send(struct hand_struct *hand_local)	//sends information through socket
 
 		remaining -= amt_sent;
 		}
-	fsync();//flushes buffer
+	fsync(connect_socket);//flushes buffer
 	return;
 	}
 
@@ -168,7 +168,7 @@ void receive_and_update(hand_class *hand)
 	static unsigned int  remaining;  // amount of data left to read
 	static unsigned int  amt_sent;  // temporary for amount left
 
-	for( remaining_data = sizeof(struct hand_struct); remaining_data > 0;)
+	for( remaining = sizeof(struct hand_struct); remaining > 0;)
 		{
 		if ( -1 == (amt_sent = recv(new_socket, &hand_char_ptr[sizeof(struct hand_struct)-remaining], remaining, 0)))
 			{cerr<<"failed to read"<<endl; break; }

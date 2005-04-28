@@ -2,7 +2,7 @@
 #define _ann_
 
 //#include <pthread.h>
-#include <annie/annie.h>
+#include "../../include/annie/annie.h"
 #include "gloves/glove.h" // for hand struct
 
 

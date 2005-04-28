@@ -6,7 +6,7 @@
 using namespace std;
 #include "system_core/system_core.h"
 //#include "system_core/system_core_externs.h"
-#include "command/neural_network/neural_network.h"
+//#include "command/neural_network/neural_network.h"
 #include "gloves/glove.h"
 #include "micro_controller_comm/micro_controller_comm_externs.h"
 #include "micro_controller_comm/micro_controller_comm.h"
@@ -18,7 +18,7 @@ void *interpreter_thread(void *none)
 	// bla
 	cout<<"Interpreter thread running"<<endl;
 	hand_struct local_left_hand, local_right_hand;
-	classification_struct nn_output;
+	//classification_struct nn_output;
 	bool first_time=true;
 	
 	while (true)
