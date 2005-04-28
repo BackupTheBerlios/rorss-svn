@@ -14,7 +14,7 @@ Description:
 
 #include "../gloves/glove_externs.h"
 
-#include "../trainer/src/trainer_app.h"
+//#include "../trainer/src/trainer_app.h"
 #include "../micro_controller_comm/micro_controller_comm_externs.h"
 //#include "../command/neural_network/neural_network_externs.h"
 //#include "../command/src/interpreter_externs.h"
