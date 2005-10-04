@@ -1,7 +1,7 @@
 /*
+*  $Id$
 *  comm.h - communication header module thingie
 *  Created: 29 Sep 2005
-*  $Id$
 */
 
 #ifndef COMM_H
