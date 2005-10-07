@@ -7,22 +7,26 @@
 #ifndef COMM_H
 #define COMM_H
 
-//Ie (0xa8) interrupt Enable Register
-#define IE_GLOBAL_INTERRUPT	(0x80)
-#define IE_SERIAL_PORT_1	(0x40)
-#define IE_SERIAL_PORT_0	(0x10)
-#define IE_TIMER_1		(0x08)
-#define IE_EXTERNAL_1		(0x04)
-#define IE_TIMER_0		(0x02)
-#define IE_EXTERNAL_0		(0x01)
-
+//Ie (0xa8) interupt Enable Register
+//P 29 of  http://www.chipcon.com/files/CC1010_Data_Sheet_1_3.pdf
+#define IE_EA		(0x80)//GLOBAL_INTERRUPT
+#define IE_ES1		(0x40)//SERIAL_PORT_1
+#define IE_ES0		(0x10)//SERIAL_PORT_0
+#define IE_ET1		(0x08)//TIMER_1
+#define IE_TX1		(0x04)//EXTERNAL_1
+#define IE_ET0		(0x02)//TIMER_0
+#define IE_TX0		(0x01)//EXTERNAL_0
 //EIE (0xE8) Extended Interrupt Enable Register
-#define EIE_REALTIME_CLOCK	(0x10)
-#define EIE_TIMER_3		(0x08)
-#define EIE_ADC_DES		(0x04)
-#define EIE_TIMER_2		(0x02)
-#define EIE_RF_INTERRUPT	(0x01)
-
+#define EIE_RTCIE	(0x10)//REALTIME_CLOCK
+#define EIE_ET3		(0x08)//TIMER_3
+#define EIE_ADIE	(0x04)//ADC_DES
+#define EIE_ET2		(0x02)//TIMER_2
+#define EIE_RFIE	(0x01)//RF_INTERRUPT
+//EXIF (0x91) Exted interrupt Flag
+#define EXIF_TF3	(0x80)//Timer 3 interrupt flag
+#define EXIF_ADIF	(0x40)//ADC/DES interrupt Flag
+#define EXIF_TF2	(0x20)//Timer 2 interrupt flag
+#define EXIF_RFIF	(0x10)//RF Transmit/receive interrupt flag
 
 // Flags in each communication packet
 #define DIRECTION	0x01
