@@ -18,7 +18,7 @@ int main(void)
 {
 	
 	// Initialize serial
-	ser_init(void);
+	ser_init();
 	while(1);
 
 }
