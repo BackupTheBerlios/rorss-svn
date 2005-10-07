@@ -16,6 +16,12 @@
 #define IE_TIMER_0		(0x02)
 #define IE_EXTERNAL_0		(0x01)
 
+//EIE (0xE8) Extended Interrupt Enable Register
+#define EIE_REALTIME_CLOCK	(0x10)
+#define EIE_TIMER_3		(0x08)
+#define EIE_ADC_DES		(0x04)
+#define EIE_TIMER_2		(0x02)
+#define EIE_RF_INTERRUPT	(0x01)
 
 
 // Flags in each communication packet
@@ -27,12 +33,12 @@
 */ 
 struct comm_protocol
 {
-	char start_code;		// Constant start byte
-	unsigned char device;		// Device type
-	unsigned char magnitude;	// Device-dependant (i.e. speed of a motor)
-	char flags;			// 
-	char checksum;			// 7-bit checksum & 1-bit checksum parity bit
-	char end_code;			// Constant end byte
+	int8_t start_code;	// Constant start byte
+	uint8_t device;		// Device type
+	uint8_t magnitude;	// Device-dependant (i.e. speed of a motor)
+	int8_t flags;		// 
+	int8_t checksum;	// 7-bit checksum & 1-bit checksum parity bit
+	int8_t end_code;	// Constant end byte
 };
 
 #endif
