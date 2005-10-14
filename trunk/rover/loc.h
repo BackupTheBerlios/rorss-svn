@@ -27,3 +27,8 @@ uint8_t at 0xD9 MODEM2; // Modem Control Register 2
 
 uint8_t at 0xC9 RFBUF;	// RF Data Buffer
 uint8_t at 0xC2 RFCON;	// RF Control Register
+uint8_t at 0xD3 PDET;	//Preamble Detection Control Register
+uint8_t at 0xD4 BSYNC;	//Byte Synchronisation Register
+uint8_t at 0xE2 PA_POW;	//Output Power Control Regster
+
+
