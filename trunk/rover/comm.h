@@ -67,7 +67,9 @@
 #define WDT_CLR		(0x04)
 #define WDT_PRE1	(0x02)
 #define WDT_PRE0	(0x01)
-
+//PDET (0xD3) Preamble Detection Control
+#define PDET_PEN	(0x80)
+#define PDET_PRE0	(0xEF)//bits 0-6
 
 
 /*
