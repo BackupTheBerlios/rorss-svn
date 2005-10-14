@@ -27,7 +27,6 @@
 #define IE_TX1		(0x04)//EXTERNAL_1
 #define IE_ET0		(0x02)//TIMER_0
 #define IE_TX0		(0x01)//EXTERNAL_0
-
 //EIE (0xE8) Extended Interrupt Enable Register
 #define EIE_RTCIE	(0x10)//REALTIME_CLOCK
 #define EIE_ET3		(0x08)//TIMER_3
@@ -42,6 +41,15 @@
 
 // Flags in each communication packet
 #define DIRECTION	(0x01)
+
+//WDT (0xD2) Watchdog Timer Control (P63)
+#define WDT_SE		(0x10)
+#define WDT_EN		(0x08)
+#define WDT_CLR		(0x04)
+#define WDT_RE1		(0x02)
+#define WDT_RE0		(0x00)
+
+
 
 /*
 *  Standard packet for transmitting data

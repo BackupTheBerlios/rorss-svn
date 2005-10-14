@@ -18,3 +18,5 @@ uint8_t at 0xa4 P0DIR;
 uint8_t at 0xa5 P1DIR;
 uint8_t at 0xa6 P2DIR;
 uint8_t at 0xa7 P3DIR;
+
+uint8_t at 0xD2 WDT;
