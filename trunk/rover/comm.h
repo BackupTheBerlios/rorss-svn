@@ -50,6 +50,11 @@
 #define RFMAIN_CORE_PD	(0x04) // Power down of main crystal oscillator core
 #define RFMAIN_BIAS_PD	(0x02) // Power down of bias current generator and xtal oscillator buffer
 
+// RFCON (0xC2) RF Control Register
+#define RFCON_MVIOL	(0x10) // Manchester code violation status
+#define RFCON_MLIMIT	(0x0E) // Clk regen logic limit (Manchester mode)
+#define RFCON_BYTEMODE	(0x01) // Select bitmode (0) or bytemode (1)
+
 // MODEM0 (0xDB) Modem Control Register 0
 
 
