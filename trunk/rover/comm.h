@@ -60,8 +60,8 @@
 #define WDT_SE		(0x10)
 #define WDT_EN		(0x08)
 #define WDT_CLR		(0x04)
-#define WDT_RE1		(0x02)
-#define WDT_RE0		(0x00)
+#define WDT_PRE1	(0x02)
+#define WDT_PRE0	(0x01)
 
 
 
