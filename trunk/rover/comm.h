@@ -18,7 +18,7 @@
 #define END_CRITICAL_SECTION() \
 	(IE |= 0x80)
 
-//IE (0xa8) interupt Enable Register
+//IE (0xa8) Interrupt Enable Register
 //P 29 of  http://www.chipcon.com/files/CC1010_Data_Sheet_1_3.pdf
 #define IE_EA		(0x80)//GLOBAL_INTERRUPT
 #define IE_ES1		(0x40)//SERIAL_PORT_1
@@ -38,6 +38,20 @@
 #define EXIF_ADIF	(0x40)//ADC/DES interrupt Flag
 #define EXIF_TF2	(0x20)//Timer 2 interrupt flag
 #define EXIF_RFIF	(0x10)//RF Transmit/receive interrupt flag
+
+
+/* RF Control */
+// RFMAIN (0xC8) RF Main Control Register
+#define RFMAIN_RXTX	(0x80) // RX/TX Switch - 0: RX, 1: TX
+#define RFMAIN_F_REG	(0x40) // 0: Select freq registers A, 1: B
+#define RFMAIN_RX_PD	(0x20) // Power down for LNA, mixer, IF, digital demod
+#define RFMAIN_TX_PD	(0x10) // Power down of digital modem and PA
+#define RFMAIN_FS_PD	(0x08) // Power down of freq synthesizer
+#define RFMAIN_CORE_PD	(0x04) // Power down of main crystal oscillator core
+#define RFMAIN_BIAS_PD	(0x02) // Power down of bias current generator and xtal oscillator buffer
+
+// MODEM0 (0xDB) Modem Control Register 0
+
 
 // Flags in each communication packet
 #define DIRECTION	(0x01)
