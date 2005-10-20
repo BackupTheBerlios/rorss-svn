@@ -58,6 +58,16 @@
 // MODEM0 (0xDB) Modem Control Register 0
 
 
+// SCON - Serial Control Registers
+#define SCON_SM0	(0x80) // Mode bits
+#define SCON_SM1	(0x40)
+#define SCON_SM2	(0x20) // Multiprocessor comm enable
+#define SCON_REN	(0x10) // Receive enable (1)
+#define SCON_TB8	(0x08) // Defines state of 9th bit transmitted in modes 2 & 3
+#define SCON_RB8	(0x04) // Indicates state of 9th bit received
+#define SCON_TI		(0x02) // Transmit interrupt flag
+#define SCON_RI		(0x01) // Receive interrupt flag
+
 // Flags in each communication packet
 #define DIRECTION	(0x01)
 
@@ -85,5 +95,13 @@ struct comm_protocol
 	int8_t 	checksum;	// 7-bit checksum & 1-bit checksum parity bit
 	int8_t 	end_code;	// Constant end byte
 };
+
+typedef comm_protocol		COMM_PACKET;
+
+/*
+ ****************************************
+ * Global variables
+ ****************************************
+ */
 
 #endif
