@@ -1,49 +1,22 @@
 # $Id$
 
-BIN = run_rover
+BIN = run_gloves
 CC = sdcc
 CC_FLAGS = -I/usr/share -I./ --iram-size 128
 LIBS =
+SOURCES = 
 
-all:	gloves modules astronaut rover
-	@echo "All done."
+all:	
+	#@for f in ${SOURCES}; do
+	#	@${CC} ${CC_FLAGS} ${f}
+	#@done
+	#$(CC) $(CC_FLAGS) comm.c
+	#$(CC) $(CC_FLAGS) run_rover.c
+	@echo "Done."
 
-gloves:
-	@echo "  Making (knitting) gloves"
-	cd gloves
-	make
-	cd ..
-
-modules:
-	@echo "  Making (kernel) modules"
-	cd modules
-	make
-	cd ..
-
-astronaut:
-	@echo "  Making (spawning) astronaut"
-	cd astronaut
-	make
-	cd ..
-
-rover:
-	@echo "  Making rover"
-	cd rover
-	make
-	cd ..
-
-clean:
-	@echo Cleaning the directory...
-	cd gloves
-	make clean
-	cd ../modules
-	make clean
-	cd ../astronaut
-	make clean
-	cd ../rover
-	make clean
-	cd ..
-	@echo Done.
+clean:	
+	@rm *.asm *.ihx *.lnk *.lst *.map *.mem *.rel *.rst *.sym
+	@echo "Cleaned"
 
 pizza:
 	@echo "Mmmmm..... delicious!  =P"

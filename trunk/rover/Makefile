@@ -6,14 +6,16 @@ CC_FLAGS = -I/usr/share -I./ --iram-size 128
 LIBS =
 SOURCES = comm.c run_rover.c
 
-all:	#@for f in ${SOURCES}; do
+all:	
+	#@for f in ${SOURCES}; do
 	#	@${CC} ${CC_FLAGS} ${f}
 	#@done
 	$(CC) $(CC_FLAGS) comm.c
 	$(CC) $(CC_FLAGS) run_rover.c
 	@echo "Done."
 
-clean:	@rm *.asm *.ihx *.lnk *.lst *.map *.mem *.rel *.rst *.sym
+clean:	
+	@rm *.asm *.ihx *.lnk *.lst *.map *.mem *.rel *.rst *.sym
 	@echo "Cleaned"
 
 pizza:
