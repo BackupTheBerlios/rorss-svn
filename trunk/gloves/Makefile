@@ -4,14 +4,12 @@ BIN = run_gloves
 CC = sdcc
 CC_FLAGS = -I/usr/share -I./ --iram-size 128
 LIBS =
-SOURCES = 
+SOURCES =
 
 all:	
-	#@for f in ${SOURCES}; do
-	#	@${CC} ${CC_FLAGS} ${f}
-	#@done
-	#$(CC) $(CC_FLAGS) comm.c
-	#$(CC) $(CC_FLAGS) run_rover.c
+	for f in $(SOURCES); do \
+		$(CC) $(CC_FLAGS) $$f ; \
+	done ;
 	@echo "Done."
 
 clean:	
@@ -20,7 +18,4 @@ clean:
 
 pizza:
 	@echo "Mmmmm..... delicious!  =P"
-
-1337:
-	@echo "Wheeeeeeee!!!!!!11!!111oneoneoneone!!"
 
