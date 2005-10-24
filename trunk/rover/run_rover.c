@@ -7,6 +7,7 @@
 #include <sdcc/include/stdint.h>
 #include <sdcc/include/ser_ir.h>
 #include <sdcc/include/string.h> // for memset
+#include "gloves/gloves.h"
 #include "comm.h"
 
 extern COMM_PACKET		incoming_rf_data;
@@ -31,7 +32,7 @@ int main(void)
 	// Initialize RF parameters
 	RFCON = RFCON_BYTEMODE;  // enable bytemode (8-bits before interrupt fired)
 	
-	memset(incoming_rf_data, sizeof(COMM_PACKET));
+	memset(&incoming_rf_data, 0, sizeof(COMM_PACKET));
 	next_incoming_rf_byte = &(uint8_t) incoming_rf_data;
 	
 	while(1);

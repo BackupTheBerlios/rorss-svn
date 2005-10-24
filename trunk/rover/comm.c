@@ -13,10 +13,12 @@
 
 
 COMM_PACKET		incoming_rf_data;
-uint8_t			*next_incoming_rf_byte;
+uint8_t			*next_incoming_rf_byte = &incoming_rf_data;
 
 GLOVE_SERIAL_DATA	incoming_glove_data;
-uint8_t			*next_incoming_glove_byte;
+uint8_t			*next_incoming_glove_byte = &incoming_glove_data;
+
+bool verify_checksum(uint8_t, uint8_t*, uint8_t);
 
 // Verifies that the data is correct 
 // according to its checksum
@@ -24,20 +26,13 @@ bool verify_checksum(uint8_t checksum, uint8_t *data, uint8_t size_of_data)
 {
 	uint8_t sum, i;
 	
-	for(i = 0; i <= size_of_data; i += sizeof(size_of_data))
-    {
+	for(i = 0; i < size_of_data; i += sizeof(size_of_data))
+	{
 		sum += *data;
 		data++;
 	}
 	
-	if ( sum == checksum )
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return (bool)(sum == checksum);
 }
 
 // RF transmit/receive interrupt

@@ -96,7 +96,7 @@ struct comm_protocol
 	int8_t 	end_code;	// Constant end byte
 };
 
-typedef comm_protocol		COMM_PACKET;
+typedef struct comm_protocol	COMM_PACKET;
 
 /*
  ****************************************
