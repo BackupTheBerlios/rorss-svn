@@ -83,6 +83,33 @@ void ser0_isr(void) interrupt 0x23
 	// Receiving data?
 	if (SCON0 & SCON_RI)
 	{
+		// Grab buffer data, stick it at pointer location
+		*next_incoming_serial_byte = RFBUF;
+		
+		// Increment pointer if it won't go past the end of
+		// the global buffer
+		if ( (&(uint8_t)incoming_serial_data - next_incoming_serial_byte) < \
+		       (sizeof(incoming_serial_data) - sizeof(next_incoming_serial_byte)) )
+		{
+			next_incoming_serial_byte++;
+		}
+		// Otherwise, reset it to the beginning of the
+		// global buffer
+		else
+		{
+			next_incoming_serial_byte = &(uint8_t)incoming_serial_data;
+			
+			// Process the data since the buffer is full
+			if ( verify_checksum(incoming_serial_data.checksum, &(uint8_t)incoming_serial_data + sizeof(incoming_serial_data.start_code), \
+					sizeof(incoming_serial_data) - sizeof(incoming_serial_data.start_code) - sizeof(incoming_serial_data.end_code) - sizeof(incoming_serial_data.checksum)) )
+			{
+				// Send it out serially
+				ser_puts( (unsigned char) &incoming_serial_data );
+				// Toggle P0.0
+				P0 ^= 0x01;
+			}
+			// else data was bad, chuck it
+		}
 		
 		
 		// Clear flag
