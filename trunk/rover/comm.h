@@ -56,7 +56,30 @@
 #define RFCON_BYTEMODE	(0x01) // Select bitmode (0) or bytemode (1)
 
 // MODEM0 (0xDB) Modem Control Register 0
+#define MODEM0_BAUDRATE		(0xE0)
+#	define MODEM0_0.6K		(0x00)
+#	define MODEM0_1.2K		(0x01)
+#	define MODEM0_2.4K		(0x02)
+#	define MODEM0_4.8K		(0x03)
+#	define MODEM0_9.6K		(0x04)
+#	define MODEM0_19.2K		(0x05)
+#define MODEM0_DATA_FMT		(0x18)
+#	define MODEM0_NRZ			(0x00)
+#	define MODEM0_MANCHESTER	(0x01)
+#	define MODEM0_TRANSPARENT	(0x02)
+#	define MODEM0_UART			(0x03)
+#define MODEM0_XOSC_FREQ	(0x07)
 
+// MODEM1 (0xDA) Modem Control Register 1
+
+// MODEM2 (0xD9) Modem Control Register 2
+
+// PDET (0xD3) Preamble Detection Control Register
+#define PDET_PEN	(0x80) // Preamble and byte sync enable
+#define PDET_PLEN	(0x7F) // Preamble length
+
+// BSYNC (0xD4) Byte Synchronisation Register
+#define SYNC_BYTE	(0xA5) // The synchronisation byte
 
 // SCON - Serial Control Registers
 #define SCON_SM0	(0x80) // Mode bits
