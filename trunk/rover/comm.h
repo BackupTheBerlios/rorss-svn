@@ -55,6 +55,11 @@
 #define RFCON_MLIMIT	(0x0E) // Clk regen logic limit (Manchester mode)
 #define RFCON_BYTEMODE	(0x01) // Select bitmode (0) or bytemode (1)
 
+// CKCON (0x8E) Timer Clock Rate Control Register
+#define CKCON_T1M	(0x10)
+#define CKCON_T0M	(0x08)
+#define CKCON_MD	(0x07)
+
 // MODEM0 (0xDB) Modem Control Register 0
 #define MODEM0_BAUDRATE			(0xE0)
 	#define MODEM0_0_6K		(0x00)

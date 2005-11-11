@@ -22,6 +22,7 @@ __sfr __at 0xa6 P2DIR;	// Port2 direction
 __sfr __at 0xa7 P3DIR;	// Port3 direction
 
 __sfr __at 0xD2 WDT;	// Watchdog timer
+__sfr __at 0x8E CKCON;	// Timer Clock Rate Control Register
 
 __sfr __at 0xDB MODEM0;	// Modem Control Register 0
 __sfr __at 0xDA MODEM1;	// Modem Control Register 1
@@ -39,5 +40,5 @@ __sfr __at 0xC1 SBUF1;	// Serial Data Buffer 1
 __sfr __at 0x98 SCON0;	// Serial Port 0 Control Register
 __sfr __at 0xC0 SCON1;	// Serial Port 1 Control Register
 
-
+__sfr __at 0xE8 EIE;	// Extended interrupt enable
 __sfr __at 0x91 EXIF;	// Extended interrupt flag
