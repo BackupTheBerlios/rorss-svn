@@ -1,7 +1,7 @@
 /*
  *
  * $Id$
- * run_rover.c - The main program for the rover
+ * run_astronaut.c - The main program for the astronaut
  * Created: 6 Oct 2005
  *
  */
@@ -42,7 +42,7 @@ int main(void)
 	MODEM0 = (MODEM0_BAUDRATE & MODEM0_0_6K) | \
 				(MODEM0_DATA_FMT & MODEM0_MANCHESTER) | \
 				(MODEM0_XOSC_FREQ & 0x00);
-	RFMAIN = 0;  // enable RX, power everything up
+	RFMAIN = RFMAIN_RXTX;  // enable TX, power everything up
 	
 	memset(&incoming_rf_data, 0, sizeof(COMM_PACKET));
 	next_incoming_rf_byte = &(uint8_t) incoming_rf_data;
