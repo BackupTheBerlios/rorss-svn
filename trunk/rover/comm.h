@@ -96,9 +96,6 @@
 #define SCON_TI		(0x02) // Transmit interrupt flag
 #define SCON_RI		(0x01) // Receive interrupt flag
 
-// Flags in each communication packet
-#define DIRECTION	(0x01)
-
 //WDT (0xD2) Watchdog Timer Control (P63)
 #define WDT_SE		(0x10)
 #define WDT_EN		(0x08)
@@ -109,11 +106,21 @@
 #define PDET_PEN	(0x80)
 #define PDET_PRE0	(0xEF)//bits 0-6
 
+/***************************************
+ * Communications protocol
+ ***************************************
+ */
+
+
+// Flags in each communication packet
+#define DIRECTION	(0x01)
+	#define DIR_FORWARD	0
+	#define DIR_REVERSE	1
 
 /*
-*  Standard packet for transmitting data
-*  across a link (serial, RF, etc)
-*/ 
+ *  Standard packet for transmitting data
+ *  across a link (serial, RF, etc)
+ */ 
 struct comm_protocol
 {
 	int8_t 	start_code;	// Constant start byte
