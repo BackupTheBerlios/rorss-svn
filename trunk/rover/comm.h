@@ -134,6 +134,19 @@ struct comm_protocol
 typedef struct comm_protocol	COMM_PACKET;
 
 /*
+ *  Pointers to keep track of where 
+ *  we are when sending data serially
+ */
+struct transmitting_serial_data
+{
+	uint8_t start;
+	uint8_t *end;
+	uint8_t *current;
+};
+
+typedef struct transmitting_serial_data	TRANSMITTING_SERIAL_DATA;
+
+/*
  ****************************************
  * Global variables
  ****************************************
