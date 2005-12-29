@@ -35,12 +35,6 @@ uint8_t			outgoing_rf_buffer[OUTGOING_BUFFER_SIZE];
 int8_t			last_byte_idx_rf = -1;
 
 /*
- * Function prototypes
- */
-bool verify_checksum(uint8_t, uint8_t *, uint8_t);
-void send_serial_data(bit, uint8_t *, uint8_t *);
-
-/*
  * Function definitions
  */
 // Verifies that the data is correct 
