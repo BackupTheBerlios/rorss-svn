@@ -15,6 +15,7 @@
 #include <sdcc/include/string.h> // for memset
 #include "gloves/gloves.h"
 #include "comm.h"
+#include "unistd.h"
 
 extern COMM_PACKET		incoming_rf_data;
 extern uint8_t			*next_incoming_rf_byte;
@@ -31,6 +32,8 @@ void ser1_isr(void) interrupt 0x3B;
 
 void main(void)
 {
+
+	uint8_t bunk = 255;  // for testing only
 	
 	// Initialize serial for 19200 baud, 1 stop bit, no parity
 	CKCON = (CKCON_T1M & 0);	// using table 23 on pg 69
@@ -54,7 +57,11 @@ void main(void)
 	IE  = IE_EA | IE_ES1 | IE_ES0;  // enable all interrupts, and serial 0 and 1
 	EIE = EIE_RFIE;  // enable RF interrupt
 	
-	while(1);
-	
-}
+	while(1)
+	{
+		// just for testing
+		send_rf_data( &bunk, &bunk + 1 );
+		sleep( 500 );
+	}
 
+}
