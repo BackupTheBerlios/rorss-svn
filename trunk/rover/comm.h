@@ -9,6 +9,10 @@
 
 #include "loc.h"
 
+// Function prototypes
+void send_rf_data(uint8_t *, uint8_t *);
+void send_serial_data(bit, uint8_t *, uint8_t *);
+
 // Macros
 // Disable all interrupts (except flash/debug)
 #define BEGIN_CRITICAL_SECTION() \
