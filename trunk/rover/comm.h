@@ -24,24 +24,24 @@ void send_serial_data(bit, uint8_t *, uint8_t *);
 
 //IE (0xa8) Interrupt Enable Register
 //P 29 of  http://www.chipcon.com/files/CC1010_Data_Sheet_1_3.pdf
-#define IE_EA		(0x80)//GLOBAL_INTERRUPT
-#define IE_ES1		(0x40)//SERIAL_PORT_1
-#define IE_ES0		(0x10)//SERIAL_PORT_0
-#define IE_ET1		(0x08)//TIMER_1
-#define IE_TX1		(0x04)//EXTERNAL_1
-#define IE_ET0		(0x02)//TIMER_0
-#define IE_TX0		(0x01)//EXTERNAL_0
+#define IE_EA		(0x80) // GLOBAL_INTERRUPT
+#define IE_ES1		(0x40) // SERIAL_PORT_1
+#define IE_ES0		(0x10) // SERIAL_PORT_0
+#define IE_ET1		(0x08) // TIMER_1
+#define IE_TX1		(0x04) // EXTERNAL_1
+#define IE_ET0		(0x02) // TIMER_0
+#define IE_TX0		(0x01) // EXTERNAL_0
 //EIE (0xE8) Extended Interrupt Enable Register
-#define EIE_RTCIE	(0x10)//REALTIME_CLOCK
-#define EIE_ET3		(0x08)//TIMER_3
-#define EIE_ADIE	(0x04)//ADC_DES
-#define EIE_ET2		(0x02)//TIMER_2
-#define EIE_RFIE	(0x01)//RF_INTERRUPT
+#define EIE_RTCIE	(0x10) // REALTIME_CLOCK
+#define EIE_ET3		(0x08) // TIMER_3
+#define EIE_ADIE	(0x04) // ADC_DES
+#define EIE_ET2		(0x02) // TIMER_2
+#define EIE_RFIE	(0x01) // RF_INTERRUPT
 //EXIF (0x91) Exted interrupt Flag
-#define EXIF_TF3	(0x80)//Timer 3 interrupt flag
-#define EXIF_ADIF	(0x40)//ADC/DES interrupt Flag
-#define EXIF_TF2	(0x20)//Timer 2 interrupt flag
-#define EXIF_RFIF	(0x10)//RF Transmit/receive interrupt flag
+#define EXIF_TF3	(0x80) // Timer 3 interrupt flag
+#define EXIF_ADIF	(0x40) // ADC/DES interrupt Flag
+#define EXIF_TF2	(0x20) // Timer 2 interrupt flag
+#define EXIF_RFIF	(0x10) // RF Transmit/receive interrupt flag
 
 
 /* RF Control */
@@ -100,7 +100,7 @@ void send_serial_data(bit, uint8_t *, uint8_t *);
 #define SCON_TI		(0x02) // Transmit interrupt flag
 #define SCON_RI		(0x01) // Receive interrupt flag
 
-//WDT (0xD2) Watchdog Timer Control (P63)
+// WDT (0xD2) Watchdog Timer Control (P63)
 #define WDT_SE		(0x10)
 #define WDT_EN		(0x08)
 #define WDT_CLR		(0x04)
@@ -109,6 +109,16 @@ void send_serial_data(bit, uint8_t *, uint8_t *);
 //PDET (0xD3) Preamble Detection Control
 #define PDET_PEN	(0x80)
 #define PDET_PRE0	(0xEF)//bits 0-6
+
+// TCON (0x88) Timer 0/1 Control
+#define TCON_TF1	(0x80) // Timer 1 overflow
+#define TCON_TR1	(0x40) // Timer 1 run control (1 - enable)
+#define TCON_TF0	(0x20) // Timer 0 overflow
+#define TCON_TR0	(0x10) // Timer 0 run control
+#define TCON_IE1	(0x08) // External interrupt 1 edge detect
+#define TCON_IT1	(0x04) // External interrupt 1 type select
+#define TCON_IE0	(0x08) // External interrupt 0 edge detect
+#define TCON_IT0	(0x04) // External interrupt 0 type select
 
 /***************************************
  * Communications protocol
