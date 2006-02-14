@@ -42,3 +42,6 @@ __sfr __at 0xC0 SCON1;	// Serial Port 1 Control Register
 
 __sfr __at 0xE8 EIE;	// Extended interrupt enable
 __sfr __at 0x91 EXIF;	// Extended interrupt flag
+
+__sfr __at 0x89 TMOD;	// Timer / Counter 0 and 1 Mode Register
+__sfr __at 0x88 TCON;	// Timer / Counter 0 and 1 Control Register
