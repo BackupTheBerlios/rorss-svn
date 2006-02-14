@@ -5,8 +5,8 @@ CC = sdcc
 CC_FLAGS = -I/usr/share -I./ -I../ --iram-size 128
 CC_FLAGS_DBG = ${CC_FLAGS} --debug
 LIBS =
-SOURCES = comm.c unistd.c # all the sources except the one containing main()
-RELS = comm.rel unistd.rel # this line should be the same as the above, with 'rel' replacing 'c'
+SOURCES = comm.c pwm.c unistd.c # all the sources except the one containing main()
+RELS = comm.rel pwm.rel unistd.rel # this line should be the same as the above, with 'rel' replacing 'c'
 MAIN_PROG = run_rover.c # the source file containing main()
 
 debug:
