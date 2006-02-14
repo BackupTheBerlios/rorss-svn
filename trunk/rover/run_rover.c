@@ -28,6 +28,7 @@ extern uint8_t			*next_incoming_glove_byte;
 void rf_isr(void)   interrupt 0x43;
 void ser0_isr(void) interrupt 0x23;
 void ser1_isr(void) interrupt 0x3B;
+void timer0_isr(void) interrupt 0x08;
 
 
 void main(void)
