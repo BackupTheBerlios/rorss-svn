@@ -5,6 +5,9 @@
  *
  */
 
+#include <sdcc/include/stdint.h>
+#include <sdcc/include/mcs51/8051.h>
+
 #define		PERIOD		255
 
 #define		PWM_OUT_0	0x01
@@ -18,5 +21,15 @@ uint8_t		duty_cycle[4];		// make these separate variables?
 void update_PWM_status() {
 	period_counter++;
 	
+
+}
+
+// Timer0 Overflow ISR
+// Interrupt enable: IE_ET0
+// Interrupt flag: TCON_TF_0 (cleared in hardware)
+void timer0_isr(void) interrupt 0x08
+{
+
+	update_PWM_status();
 
 }
