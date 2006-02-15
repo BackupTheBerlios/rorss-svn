@@ -38,6 +38,21 @@ bool verify_checksum(uint8_t checksum, uint8_t *data_ptr, uint8_t size_of_data)
 	return (bool)(sum == checksum);
 }
 
+// Stub for compressing the serial data in from the gloves
+// to 3-bit numbers
+// CHANGE THIS COMMENT TO SOMETHING MORE USEFUL
+GLOVE_COMPRESSED_DATA compress_glove_gesture(GLOVE_SERIAL_DATA *data_to_compress)
+{
+
+
+
+}
+
+void interpret_gesture(GLOVE_COMPRESSED_DATA compressed_glove_gesture)
+{
+
+}
+
 /****************************************************************************
  *                                ISRs                                      *
  ****************************************************************************/
@@ -101,7 +116,7 @@ void ser0_isr(void) interrupt 0x23
 	if (SCON0 & SCON_RI)
 	{
 		// Grab buffer data, stick it at pointer location
-		*next_incoming_glove_byte = RFBUF;
+		*next_incoming_glove_byte = SBUF0;
 		
 		// Increment pointer if it won't go past the end of
 		// the global buffer
@@ -127,6 +142,15 @@ void ser0_isr(void) interrupt 0x23
 			}
 			// else data was bad, chuck it
 		}		
+		
+		// Test to see if current buffer is filled with enough
+		// data to compress and interpret
+		if ( (next_incoming_glove_byte - &incoming_glove_data) > sizeof(GLOVE_SERIAL_DATA) )
+		{
+			interpret_gesture( \
+				compress_glove_gesture( (GLOVE_SERIAL_DATA*) &incoming_glove_data ) \
+			);
+		}
 		
 		// Clear flag
 		SCON0 &= ~SCON_RI;
