@@ -7,6 +7,7 @@ LIBS =
 SOURCES = comm.c unistd.c # all the sources except the one containing main()
 RELS = comm.rel unistd.rel # this line should be the same as the above, with 'rel' replacing 'c'
 MAIN_PROG = run_rover.c # the source file containing main()
+CLEAN_THESE = *.asm *.ihx *.lnk *.lst *.map *.mem *.rel *.rst *.sym # remove these files with a 'make clean'
 
 all:	
 	# Compile sources
@@ -20,7 +21,10 @@ all:
 	@echo "Done."
 
 clean:	
-	@rm *.asm *.ihx *.lnk *.lst *.map *.mem *.rel *.rst *.sym
+
+	for f in `ls $(CLEAN_THESE)`; do \
+		rm $$f ; \
+	done ;
 	@echo "Cleaned"
 
 pizza:
