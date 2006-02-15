@@ -5,6 +5,7 @@ CC = sdcc
 CC_FLAGS = -I/usr/share -I./ --iram-size 128
 LIBS =
 SOURCES =
+CLEAN_THESE = *.asm *.ihx *.lnk *.lst *.map *.mem *.rel *.rst *.sym # remove these files with a 'make clean'
 
 all:	
 	for f in $(SOURCES); do \
@@ -13,7 +14,9 @@ all:
 	@echo "Done."
 
 clean:	
-	@rm *.asm *.ihx *.lnk *.lst *.map *.mem *.rel *.rst *.sym
+	for f in `ls $(CLEAN_THESE)`; do \
+		rm $$f ; \
+	done ;	
 	@echo "Cleaned"
 
 pizza:
