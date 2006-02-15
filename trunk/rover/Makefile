@@ -8,6 +8,7 @@ LIBS =
 SOURCES = comm.c pwm.c unistd.c # all the sources except the one containing main()
 RELS = comm.rel pwm.rel unistd.rel # this line should be the same as the above, with 'rel' replacing 'c'
 MAIN_PROG = run_rover.c # the source file containing main()
+CLEAN_THESE = *.asm *.ihx *.lnk *.lst *.map *.mem *.rel *.rst *.sym *.adb *.cdb # remove these files with a 'make clean'
 
 debug:
 	# Compile sources
@@ -32,7 +33,10 @@ all:
 	@echo "Done."
 
 clean:	
-	@rm *.asm *.ihx *.lnk *.lst *.map *.mem *.rel *.rst *.sym *.adb *.cdb
+
+	for f in `ls $(CLEAN_THESE)`; do \
+		rm $$f ; \
+	done ;		
 	@echo "Cleaned"
 
 pizza:
