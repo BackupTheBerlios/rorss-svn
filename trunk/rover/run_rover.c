@@ -70,7 +70,7 @@ void main(void)
 	{
 		// just for testing
 		send_rf_data( &bunk, &bunk + 1 );
-		RLED = RLED ^ LED_ON;  // Toggle Red LED
+		RLED = LED_ON;  // Toggle Red LED
 		sleep( 500 );
 	}
 
