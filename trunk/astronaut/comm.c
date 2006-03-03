@@ -38,14 +38,33 @@ bool verify_checksum(uint8_t checksum, uint8_t *data_ptr, uint8_t size_of_data)
 	return (bool)(sum == checksum);
 }
 
-// Stub for compressing the serial data in from the gloves
-// to 3-bit numbers
-// CHANGE THIS COMMENT TO SOMETHING MORE USEFUL
-GLOVE_COMPRESSED_DATA compress_glove_gesture(GLOVE_SERIAL_DATA *data_to_compress)
+// Compress the serial data in from the gloves
+// to 1-bit numbers
+GLOVE_COMPRESSED_DATA compress_glove_gesture(GLOVE_SERIAL_DATA *data_to_compress, bool which_hand)
+//which_hand is true/1 when the right hand is being operated on, it is false/0 when the left hand is being operated on
 {
-
-
-
+	GLOVE_COMPRESSED_DATA gc;
+	if (which_hand)
+	{
+		gc.thumb = (*data_to_compress.right.thumb > 127 ? 1 : 0);
+		gc.index = (*data_to_compress.right.index > 127 ? 1 : 0);
+		gc.middle = (*data_to_compress.right.middle > 127 ? 1 : 0);
+		gc.ring = (*data_to_compress.right.ring > 127 ? 1 : 0);
+		gc.pinky = (*data_to_compress.right.pinky > 127 ? 1 : 0);
+		gc.pitch = (*data_to_compress.right.pitch > 127 ? 1 : 0);
+		gc.roll = (*data_to_compress.right.roll > 127 ? 1 : 0);
+	}
+	else
+	{
+		gc.thumb = (*data_to_compress.left.thumb > 127 ? 1 : 0);
+		gc.index = (*data_to_compress.left.index > 127 ? 1 : 0);
+		gc.middle = (*data_to_compress.left.middle > 127 ? 1 : 0);
+		gc.ring = (*data_to_compress.left.ring > 127 ? 1 : 0);
+		gc.pinky = (*data_to_compress.left.pinky > 127 ? 1 : 0);
+		gc.pitch = (*data_to_compress.left.pitch > 127 ? 1 : 0);
+		gc.roll = (*data_to_compress.left.roll > 127 ? 1 : 0);
+	}
+	return gc;
 }
 
 void interpret_gesture(GLOVE_COMPRESSED_DATA compressed_glove_gesture)

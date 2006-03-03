@@ -13,6 +13,7 @@
 #include <sdcc/include/stdint.h>
 #include <sdcc/include/ser_ir.h>
 #include <sdcc/include/string.h> // for memset
+#include "cc1010eb.h"
 #include "gloves/gloves.h"
 #include "comm.h"
 
