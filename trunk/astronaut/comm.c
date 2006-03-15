@@ -9,6 +9,7 @@
 #include <sdcc/include/stdint.h>
 #include <sdcc/include/ser_ir.h>
 #include "gloves/gloves.h"
+#include "shared/ftable.h"
 #include "comm.h"
 
 
@@ -44,26 +45,30 @@ GLOVE_COMPRESSED_DATA compress_glove_gesture(GLOVE_SERIAL_DATA *data_to_compress
 //which_hand is true/1 when the right hand is being operated on, it is false/0 when the left hand is being operated on
 {
 	GLOVE_COMPRESSED_DATA gc;
+
+	gc.hand = (bit) which_hand;
+
 	if (which_hand)
 	{
-		gc.thumb = (*data_to_compress.right.thumb > 127 ? 1 : 0);
-		gc.index = (*data_to_compress.right.index > 127 ? 1 : 0);
-		gc.middle = (*data_to_compress.right.middle > 127 ? 1 : 0);
-		gc.ring = (*data_to_compress.right.ring > 127 ? 1 : 0);
-		gc.pinky = (*data_to_compress.right.pinky > 127 ? 1 : 0);
-		gc.pitch = (*data_to_compress.right.pitch > 127 ? 1 : 0);
-		gc.roll = (*data_to_compress.right.roll > 127 ? 1 : 0);
+		gc.thumb  = (*data_to_compress.hand.right.thumb  > 127 ? 1 : 0);
+		gc.index  = (*data_to_compress.hand.right.index  > 127 ? 1 : 0);
+		gc.middle = (*data_to_compress.hand.right.middle > 127 ? 1 : 0);
+		gc.ring   = (*data_to_compress.hand.right.ring   > 127 ? 1 : 0);
+		gc.pinky  = (*data_to_compress.hand.right.pinky  > 127 ? 1 : 0);
+		gc.pitch  = (*data_to_compress.hand.right.pitch  > 127 ? 1 : 0);
+		gc.roll   = (*data_to_compress.hand.right.roll   > 127 ? 1 : 0);
 	}
 	else
 	{
-		gc.thumb = (*data_to_compress.left.thumb > 127 ? 1 : 0);
-		gc.index = (*data_to_compress.left.index > 127 ? 1 : 0);
-		gc.middle = (*data_to_compress.left.middle > 127 ? 1 : 0);
-		gc.ring = (*data_to_compress.left.ring > 127 ? 1 : 0);
-		gc.pinky = (*data_to_compress.left.pinky > 127 ? 1 : 0);
-		gc.pitch = (*data_to_compress.left.pitch > 127 ? 1 : 0);
-		gc.roll = (*data_to_compress.left.roll > 127 ? 1 : 0);
+		gc.thumb  = (*data_to_compress.hand.left.thumb  > 127 ? 1 : 0);
+		gc.index  = (*data_to_compress.hand.left.index  > 127 ? 1 : 0);
+		gc.middle = (*data_to_compress.hand.left.middle > 127 ? 1 : 0);
+		gc.ring   = (*data_to_compress.hand.left.ring   > 127 ? 1 : 0);
+		gc.pinky  = (*data_to_compress.hand.left.pinky  > 127 ? 1 : 0);
+		gc.pitch  = (*data_to_compress.hand.left.pitch  > 127 ? 1 : 0);
+		gc.roll   = (*data_to_compress.hand.left.roll   > 127 ? 1 : 0);
 	}
+
 	return gc;
 }
 
@@ -167,7 +172,7 @@ void ser0_isr(void) interrupt 0x23
 		if ( (next_incoming_glove_byte - &incoming_glove_data) > sizeof(GLOVE_SERIAL_DATA) )
 		{
 			interpret_gesture( \
-				compress_glove_gesture( (GLOVE_SERIAL_DATA*) &incoming_glove_data ) \
+				compress_glove_gesture( (GLOVE_SERIAL_DATA*) &incoming_glove_data, RIGHT_GLOVE ) \
 			);
 		}
 		
