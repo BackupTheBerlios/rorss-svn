@@ -14,10 +14,10 @@
 #define CLKFREQ 14746
 
 /********** LED macros ***********/
-#define RLED (P1 ^ 0x02) // pin 2
-#define YLED (P1 ^ 0x04) // pin 3
-#define GLED (P1 ^ 0x08) // pin 4
-#define BLED (P2 ^ 0x10) // pin 5
+#define RLED (P1_2) // pin 2
+#define YLED (P1_3) // pin 3
+#define GLED (P1_4) // pin 4
+#define BLED (P2_5) // pin 5
 
 #define LED_ON  0
 #define LED_OFF 1
