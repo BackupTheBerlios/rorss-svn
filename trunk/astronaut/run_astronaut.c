@@ -47,7 +47,10 @@ int main(void)
 	
 	memset(&incoming_rf_data, 0, sizeof(COMM_PACKET));
 	next_incoming_rf_byte = &(uint8_t) incoming_rf_data;
-	
+
+	// Enable LEDs
+	BLED_OE(true);
+
 	while(1);
 
 }
