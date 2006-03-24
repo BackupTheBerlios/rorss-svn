@@ -2,10 +2,12 @@
  *	$Id
  *	ftable code which defines the function table lookups
  */
+#include <sdcc/include/stdint.h>
+#include <sdcc/include/stdbool.h>
 #include "ftable.h"
 
 //call this to handle incoming rf byte
-void HandleIncoming(const uint8_t &rf_byte)
+void HandleIncoming(uint8_t *rf_byte)
 {
 	if(rf_byte == MODE_SWITCH_ROVER)
 		rvModeRover = MODE_ROVER;	//put an LED on a pin to determine which mode?
@@ -16,13 +18,13 @@ void HandleIncoming(const uint8_t &rf_byte)
 		int flags;
 		if(rvModeRover == MODE_ROVER)
 		{
-			fpRover *func = GetRoverFunction(rf_byte,flags);
+			fpRover *func = GetRoverFunction(rf_byte, &flags);
 			if(func)
 				(*func)(flags);
 		}
 		else if(rvModeRover == MODE_MODULE)
 		{
-			fpModule *func = GetModuleFunction(rf_byte,flags);
+			fpModule *func = GetModuleFunction(rf_byte, &flags);
 			if(func)
 				(*func)(flags);
 		}
@@ -31,7 +33,7 @@ void HandleIncoming(const uint8_t &rf_byte)
 }//call this to handle incoming rf data on rover
 
 //these should not be called directly, but should be called from the HandleIncoming Function
-fpRover *GetRoverFunction(const uint8_t incoming_byte, uint8_t &flags)
+fpRover *GetRoverFunction(uint8_t incoming_byte, uint8_t *flags)
 {
 	//get first 3 bits seperate
 	uint8_t compare_byte = (incoming_byte & FTABLE_FUNC_MASK);//mask out bottom bytes
@@ -64,7 +66,7 @@ fpRover *GetRoverFunction(const uint8_t incoming_byte, uint8_t &flags)
 	return func;
 }//return function pointer to function to call
 
-fpModule *GetModuleFunction(const uint8_t incoming_byte, uint8_t &flags)
+fpModule *GetModuleFunction(uint8_t incoming_byte, uint8_t *flags)
 {
 	return 0;//fill this in later.....
 }//return function pointer to function
