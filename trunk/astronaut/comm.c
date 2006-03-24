@@ -113,7 +113,7 @@ void rf_isr(void) interrupt 0x43
 				// Send it out serially
 				ser_puts( (unsigned char *) &incoming_rf_data );
 				// Toggle Blue LED
-				BLED = LED_ON;
+				P1_1 = (P1_1 ^ 1);
 			}
 			// else data was bad, chuck it
 		}
