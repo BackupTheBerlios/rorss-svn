@@ -6,6 +6,7 @@
  */
 
 #include <sdcc/include/stdint.h>
+#include <sdcc/include/stdbool.h>
 
 #define HEADER		(0x80)
 
@@ -19,29 +20,29 @@
 struct glove_serial_data
 {
 	uint8_t		header;		// Defined as 0x80
-	
+
 	// All these are magnitudes from 0-255
 	union
 	{
-		struct r
+		struct right
 		{
 			int8_t		r_thumb;
 			int8_t		r_index;
 			int8_t		r_middle;
 			int8_t		r_ring;
 			int8_t		r_little;
-		} right;
-	
-		struct l
+		};
+
+		struct left
 		{
 			int8_t		l_little;
 			int8_t		l_ring;
 			int8_t		l_middle;
 			int8_t		l_index;
 			int8_t		l_thumb;
-		} left;
+		};
 	} hand;
-	
+
 	int8_t		pitch;
 	int8_t		roll;
 	uint8_t		checksum;
@@ -68,17 +69,17 @@ struct glove_compressed_data
 	uint8_t little_and_pitch;
 	uint8_t roll_and_checksum;
 	*/
-	
-	bit hand;
-	
-	bit thumb;
-	bit index;
-	bit middle;
-	bit ring;
-	bit pinky;
 
-	bit pitch;
-	bit roll;
+	uint8_t hand;
+
+	uint8_t thumb;
+	uint8_t index;
+	uint8_t middle;
+	uint8_t ring;
+	uint8_t pinky;
+
+	uint8_t pitch;
+	uint8_t roll;
 };
 
 typedef struct glove_compressed_data	GLOVE_COMPRESSED_DATA;
