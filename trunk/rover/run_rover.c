@@ -35,7 +35,7 @@ void main(void)
 {
 
 	uint8_t bunk = 255;  // for testing only
-
+	uint16_t counter = 0;
 	// Initialize serial for 19200 baud, 1 stop bit, no parity
 	CKCON = (CKCON_T1M & 0);	// using table 23 on pg 69
 	TH1   = 252;
@@ -63,15 +63,28 @@ void main(void)
 	IE  = IE_EA | IE_ES1 | IE_ES0 | IE_ET0;  // enable all interrupts, serial 0 and 1, and timer0
 	EIE = EIE_RFIE;  // enable RF interrupt
 
-	// Enable Red LED
+	// Enable LEDs
+	BLED_OE(true);
+	GLED_OE(true);
 	RLED_OE(true);
+	YLED_OE(true);
 
 	while(1)
 	{
 		// just for testing
 		send_rf_data( &bunk, &bunk + 1 );
-		RLED = LED_ON;  // Toggle Red LED
-		sleep( 500 );
+		BLED = LED_ON;  // Turn on Red LED
+		if (counter > 5)
+		{
+			RLED = LED_ON;
+			if (counter > 10) 
+			{
+				RLED = LED_OFF;
+				counter = 0;
+			}
+		}
+		GLED = GLED ^ 1;  // Toggle Green
+		counter = counter + 1;
 	}
 
 }
