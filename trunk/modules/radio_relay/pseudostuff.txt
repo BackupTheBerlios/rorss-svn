@@ -1,0 +1,14 @@
+when powered up:
+check for communications
+if no communications, send ID packet
+wait from response from microcontroller
+
+wait for commands
+interrupts on:
+serial in
+
+functions:
+open
+close
+up
+down
