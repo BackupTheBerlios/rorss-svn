@@ -70,3 +70,8 @@ fpModule *GetModuleFunction(uint8_t incoming_byte, uint8_t *flags)
 {
 	return 0;//fill this in later.....
 }//return function pointer to function
+
+bool ftable_RoverMoveF(uint8_t flags)
+{
+	
+}//rover movement code

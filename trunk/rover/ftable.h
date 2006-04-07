@@ -22,8 +22,8 @@ fpRover *GetRoverFunction(uint8_t incoming_byte, uint8_t *flags);
 fpModule *GetModuleFunction(uint8_t incoming_byte, uint8_t *flags);
 
 //all of the functions have to be defined below....
-extern bool ftable_RoverMoveF(uint8_t flags); //forward movement with 5 bits for speed
-extern bool ftable_RoverMoveB(uint8_t flags); //backward movement with 5 bits for speed
-extern bool ftable_RoverMoveRL(uint8_t flags); //this allows the right wheels to spin faster or slower then the left wheel by the magnitude defined with the 5 bits
-extern bool ftable_RoverMoveLR(uint8_t flags); //this allows the left wheels to spin faster or slower then the right wheel by the magnitude defined with the 5 bits
-extern bool ftable_RoverSpin(uint8_t flags); //spin the rover in circles (for testing?)
+extern bool ftable_RoverMoveF(uint8_t); //forward movement with 5 bits for speed
+extern bool ftable_RoverMoveB(uint8_t); //backward movement with 5 bits for speed
+extern bool ftable_RoverMoveRL(uint8_t); //this allows the right wheels to spin faster or slower then the left wheel by the magnitude defined with the 5 bits
+extern bool ftable_RoverMoveLR(uint8_t); //this allows the left wheels to spin faster or slower then the right wheel by the magnitude defined with the 5 bits
+extern bool ftable_RoverSpin(uint8_t); //spin the rover in circles (for testing?)

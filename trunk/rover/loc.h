@@ -45,3 +45,15 @@ __sfr __at 0x91 EXIF;	// Extended interrupt flag
 
 __sfr __at 0x89 TMOD;	// Timer / Counter 0 and 1 Mode Register
 __sfr __at 0x88 TCON;	// Timer / Counter 0 and 1 Control Register
+
+#define LMOTOR_IN1 P1_1
+#define LMOTOR_IN2 P1_2
+#define RMOTOR_IN1 P1_3
+#define RMOTOR_IN2 P1_4
+
+__sfr __at 0xAC RMOTOR_DC; //T2, Used for Duty-Cycle for Right Motor
+__sfr __at 0xAD LMOTOR_DC; //T3, Used for Duty-cycle for Left Motor
+
+__sfr __at 0xA9 TCON2; //control register for timers 2-3
+__sfr __at 0xAA T2PRE; //Timer 2 Prescalar
+__sfr __at 0xAB T3PRE; //Timer 3 Prescalar
