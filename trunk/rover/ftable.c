@@ -55,8 +55,13 @@ fpRover *GetRoverFunction(uint8_t incoming_byte, uint8_t *flags)
 	case ROVER_MOVELR:
 		func = &ftable_RoverMoveLR;
 		break;
-	case ROVER_SPIN:
-		func = &ftable_RoverSpin;
+	case ROVER_STOP:
+		func = &ftable_RoverStop:
+		break;
+
+	//testing functions
+	case ROVER_BLINK:
+		func = &ftable_RoverBlink;
 		break;
 	default:
 		func = 0;

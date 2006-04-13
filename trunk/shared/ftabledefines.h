@@ -16,8 +16,11 @@
 
 //use this to define what the upper 3 bits should look like
 //ie - bytes_to_send = ROVER_MOVEF & flags, assuming 5 bits for flags 
-#define ROVER_MOVEF		0b00000000
-#define ROVER_MOVEB		0b00100000
-#define ROVER_MOVERL	      0b01000000
-#define ROVER_MOVELR	      0b01100000
-#define ROVER_SPIN		0b10000000
+#define ROVER_MOVEF			0b00000000
+#define ROVER_MOVEB			0b00100000
+#define ROVER_MOVERL		0b01000000
+#define ROVER_MOVELR		0b01100000
+#define ROVER_STOP			0b10000000
+
+//debug functions that can be removed
+#define ROVER_BLINK			0b10100000

@@ -26,4 +26,6 @@ extern bool ftable_RoverMoveF(uint8_t); //forward movement with 5 bits for speed
 extern bool ftable_RoverMoveB(uint8_t); //backward movement with 5 bits for speed
 extern bool ftable_RoverMoveRL(uint8_t); //this allows the right wheels to spin faster or slower then the left wheel by the magnitude defined with the 5 bits
 extern bool ftable_RoverMoveLR(uint8_t); //this allows the left wheels to spin faster or slower then the right wheel by the magnitude defined with the 5 bits
-extern bool ftable_RoverSpin(uint8_t); //spin the rover in circles (for testing?)
+extern bool ftable_RoverStop(uint8_t); //stop the rover
+
+extern bool ftable_RoverBlink(uint8_t);//blink an LED (testing)

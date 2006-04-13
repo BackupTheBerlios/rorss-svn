@@ -15,6 +15,7 @@
 #include "gloves/gloves.h"
 #include "comm.h"
 #include "unistd.h"
+#include "shared/ftabledefines.h"
 
 extern COMM_PACKET		incoming_rf_data;
 extern uint8_t			*next_incoming_rf_byte;
@@ -33,7 +34,7 @@ void timer0_isr(void) interrupt 0x08;
 void main(void)
 {
 
-	uint8_t bunk = 255;  // for testing only
+	uint8_t bunk = ROVER_BLINK;  // for testing only
 	uint16_t counter = 0;
 	// Initialize serial for 19200 baud, 1 stop bit, no parity
 	CKCON = (CKCON_T1M & 0);	// using table 23 on pg 69
@@ -71,7 +72,7 @@ void main(void)
 	while(1)
 	{
 		// just for testing
-		send_rf_data( &bunk, &bunk + 1 );
+		send_rf_data( &bunk, &bunk + 1 ); //<--Now sends command to rover to blink LEDS
 		BLED = LED_ON;  // Turn on Red LED
 		if (counter > 5)
 		{
@@ -84,6 +85,7 @@ void main(void)
 		}
 		GLED = GLED ^ 1;  // Toggle Green
 		counter = counter + 1;
+		sleep(900);//sleep for 9/10 of a second
 	}
 
 }

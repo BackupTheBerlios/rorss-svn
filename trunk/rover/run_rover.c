@@ -43,11 +43,13 @@ int main(void)
 				(MODEM0_DATA_FMT & MODEM0_MANCHESTER) | \
 				(MODEM0_XOSC_FREQ & 0x00);
 	RFMAIN = RFMAIN_RXTX;  // enable TX, power everything up
+
+	P1DIR = 0x00;//make all the pins on Port 1 an output. (for logic output to HBRIDGE)
 	
 	// Initialize PWM
 	TCON2 = 0x0F; //Set Timer2,3 to HPWM Output
 	T2PRE = 255;
-	T3PRE = 255; //prescalar defined by Freq = (255/CLOCKFREQ)*(1+TnPRE)
+	T3PRE = 255; //prescalar defined by Freq = (255/CLOCKFREQ)*(1+TnPRE), CLOCKFREQ = 14746Hz
 	LMOTOR_DC = 0;
 	RMOTOR_DC = 0;//start with a duty-cycle of 0%
 	LMOTOR_IN1 = LMOTOR_IN2 = RMOTOR_IN1 = RMOTOR_IN2 = 0; //turn off motors
@@ -55,7 +57,7 @@ int main(void)
 	memset(&incoming_rf_data, 0, sizeof(COMM_PACKET));
 	next_incoming_rf_byte = &(uint8_t) incoming_rf_data;
 
-	P1DIR = 1;
+	//P1DIR = 1;
 
 	while(1);
 

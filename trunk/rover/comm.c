@@ -12,6 +12,9 @@
 #include "gloves/gloves.h"
 #include "comm.h"
 
+//for comm.c on rover side.
+#include "ftable.h"
+
 
 #define SERIAL_SEND_PORT	(0)
 #define SERIAL_RECV_PORT	(1)
@@ -67,6 +70,10 @@ void rf_isr(void) interrupt 0x43
 		// We're receiving something
 		// Grab buffer data, stick it at pointer location
 		*next_incoming_rf_byte = RFBUF;
+
+		//testing(kbn)
+		HandleIncoming(*next_incoming_rf_byte); //process the data.
+		//end testing
 		
 		// Increment pointer if it won't go past the end of
 		// the global buffer
