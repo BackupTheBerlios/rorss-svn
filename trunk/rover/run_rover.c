@@ -7,6 +7,8 @@
  */
 
 #define PREAMBLE_LENGTH (10)
+//prescalar defined by Period = (255/CLOCKFREQ)*(1+TnPRE), CLOCKFREQ = 14746Hz
+#define PWM_PRESCALER	(0)
 
 #include <sdcc/include/sdcc-lib.h>
 #include <sdcc/include/stddef.h>
@@ -48,8 +50,8 @@ int main(void)
 	
 	// Initialize PWM
 	TCON2 = 0x0F; //Set Timer2,3 to HPWM Output
-	T2PRE = 255;
-	T3PRE = 255; //prescalar defined by Freq = (255/CLOCKFREQ)*(1+TnPRE), CLOCKFREQ = 14746Hz
+	T2PRE = PWM_PRESCALER;
+	T3PRE = PWM_PRESCALER;
 	LMOTOR_DC = 0;
 	RMOTOR_DC = 0;//start with a duty-cycle of 0%
 	LMOTOR_IN1 = LMOTOR_IN2 = RMOTOR_IN1 = RMOTOR_IN2 = 0; //turn off motors
