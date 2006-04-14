@@ -16,6 +16,7 @@
 #define RIGHT_GLOVE	(0)
 #define LEFT_GLOVE	(1)
 
+extern uint8_t serial_handler[2];
 
 struct glove_serial_data
 {
