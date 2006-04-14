@@ -143,7 +143,7 @@ void ser0_isr(void) interrupt 0x23
 	{
 		if (serial_handler[0] != NULL)
 		{
-			serial_handler[0];
+			serial_handler[0](SBUF0);
 		}
 		// Grab buffer data, stick it at pointer location
 		*next_incoming_glove_byte = SBUF0;
@@ -171,7 +171,7 @@ void ser0_isr(void) interrupt 0x23
 				P0 ^= 0x01;
 			}
 			// else data was bad, chuck it
-		}		
+		}
 		
 		// Test to see if current buffer is filled with enough
 		// data to compress and interpret
@@ -207,7 +207,7 @@ void ser1_isr(void) interrupt 0x3B
 {
 		if (serial_handler[1] != NULL)
 		{
-			serial_handler[1];
+			serial_handler[1](SBUF0);
 		}
 }
 
