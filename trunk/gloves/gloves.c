@@ -77,3 +77,20 @@ void * glove_test_callback(uint8_t returned_data)
 	
 	return NULL;
 }
+
+void set_report_data_mode(bit glove)
+{
+	// Sends 0x43
+	// Gets glove data back
+	uint8_t set_report_data_command = 0x43;
+	send_serial_data( (bit)glove, &set_report_data_command, &set_report_data_command+1 );
+	critical
+	{
+		serial_handler[glove] = &buffer_glove_data_callback;
+	};
+}
+
+void * buffer_glove_data_callback(int8_t glove_byte)
+{
+
+}
