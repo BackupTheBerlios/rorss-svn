@@ -19,6 +19,8 @@ uint8_t			*next_incoming_rf_byte = &incoming_rf_data;
 GLOVE_SERIAL_DATA	incoming_glove_data;
 uint8_t			*next_incoming_glove_byte = &incoming_glove_data;
 
+uint8_t serial_handler[2];
+
 bool sending_serial_data;
 bool sending_rf_data;
 
@@ -46,7 +48,7 @@ GLOVE_COMPRESSED_DATA compress_glove_gesture(GLOVE_SERIAL_DATA *data_to_compress
 {
 	GLOVE_COMPRESSED_DATA gc;
 
-	gc.hand = (bit) which_hand;
+	gc.hand = (bool) which_hand;
 
 	if (which_hand)
 	{
@@ -139,6 +141,10 @@ void ser0_isr(void) interrupt 0x23
 	// Receiving data?
 	if (SCON0 & SCON_RI)
 	{
+		if (serial_handler[0] != NULL)
+		{
+			serial_handler[0];
+		}
 		// Grab buffer data, stick it at pointer location
 		*next_incoming_glove_byte = SBUF0;
 		
@@ -199,7 +205,10 @@ void ser0_isr(void) interrupt 0x23
 //  Interrupt flag: SCON0_RI_1
 void ser1_isr(void) interrupt 0x3B
 {
-
+		if (serial_handler[1] != NULL)
+		{
+			serial_handler[1];
+		}
 }
 
 /****************************************************************************
@@ -209,7 +218,7 @@ void ser1_isr(void) interrupt 0x3B
 // Puts data into the serial buffer
 // and blocks until it's done
 // Select the port with sel (0 or 1)
-void send_serial_data(bit port, uint8_t *data_start, uint8_t length)
+void send_serial_data(bool port, uint8_t *data_start, uint8_t length)
 {
 	uint8_t *current_data;
 	uint8_t i;
