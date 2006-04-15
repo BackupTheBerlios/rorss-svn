@@ -93,8 +93,8 @@ void rf_isr(void) interrupt 0x43
 				// Send it out serially
 				send_serial_data( SERIAL_SEND_PORT, (uint8_t *) &incoming_rf_data, (uint8_t *)(&incoming_rf_data + sizeof(incoming_rf_data)) );
 				// Toggle the green LED
-				//GLED ^= 0x04;
-				P1 = GLED;
+				//LED3 ^= 0x04;
+				P1 = LED3;
 			}
 			// else data was bad, chuck it
 			

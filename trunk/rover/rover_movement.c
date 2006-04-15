@@ -67,13 +67,13 @@ bool ftable_RoverStop(uint8_t not_used)
 
 bool ftable_RoverBlink(uint8_t not_used)
 {
-	BLED = LED_ON;
+	LED1 = LED_ON;
 	sleep(250);// 250ms is a normal blink rate
-	BLED = LED_OFF;
+	LED1 = LED_OFF;
 	sleep(250);
-	RLED = LED_ON;
+	LED2 = LED_ON;
 	sleep(250);
-	RLED = LED_OFF;
+	LED2 = LED_OFF;
 	sleep(250);
-	GLED = LED_ON;//keep green LED on
+	LED3 = LED_ON;//keep green LED on
 }//blink and LED
