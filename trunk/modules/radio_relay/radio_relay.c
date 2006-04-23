@@ -4,10 +4,10 @@
 * data sheet: http://ww1.microchip.com/downloads/en/DeviceDoc/41262A.pdf
 */
 
-#include "shared/16F685.h"
+#include "shared/p16f685.h"
 
-#device *=16
-#use rs232(baud=19200, xmit=PIN_B2, rcv=PIN_B1, stream=PC)
+//#device *=16
+//#use rs232(baud=19200, xmit=PIN_B2, rcv=PIN_B1, stream=PC)
 
 //define up-down and open-close bits as registers A3-A0
 #define UD1 (PIN_A3)
