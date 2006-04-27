@@ -14,7 +14,8 @@
 #define UD2 (PIN_A2)
 #define OC1 (PIN_A1)
 #define OC2 (PIN_A0)
-/*
+
+
 void open(void);
 void close(void);
 void up(void);
@@ -22,9 +23,9 @@ void down(void);
 void stopUD(void);
 void stopOC(void);
 void stopALL(void);
-*/
 
-#define OPEN() \
+
+/*#define OPEN() \
 	(output_low(OC1); output_high(OC2))
 #define CLOSE() \
 	(output_low(OC2); output_high(OC1))
@@ -39,7 +40,7 @@ void stopALL(void);
 	(output_low(UD2); output_low(UD1))
 #define STOPALL() \
 	(STOPUD(); STOPOC())
-
+*/
 
 int main(void)
 {
@@ -70,7 +71,7 @@ int main(void)
 
 	return 0;
 }
-/*
+
 void down(void)
 {
 	UD1 = 0;
@@ -114,4 +115,4 @@ void stopALL(void)
 	OC1 = 0;
 	OC2 = 0;
 }
-*/
+
