@@ -23,7 +23,7 @@ void down(void);
 void stopUD(void);
 void stopOC(void);
 void stopALL(void);
-
+void isr(void);
 
 /*#define OPEN() \
 	(output_low(OC1); output_high(OC2))
@@ -116,3 +116,26 @@ void stopALL(void)
 	OC2 = 0;
 }
 
+void isr(void)
+{
+	if (PA0 == 1) then stopOC();
+	if (PA1 == 1) then stopUD();
+	switch (SERIAL0)
+	{
+		case 0x00:
+			up();
+		case 0x01:
+			down();
+		case 0x02:
+			open();
+		case 0x03:
+			close();
+		case 0x04:
+			stopUD();
+		case 0x05:
+			stopOC();
+		case 0x06:
+			stopALL();
+		default:
+	}
+}
