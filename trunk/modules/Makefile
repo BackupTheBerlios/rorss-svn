@@ -2,7 +2,7 @@
 
 BIN = run_modules
 CC = sdcc
-CC_FLAGS = -I/usr/share -I./ --iram-size 128
+CC_FLAGS = -I/usr/share -I./ -Ishare
 LIBS =
 SOURCES = 
 CLEAN_THESE = *.asm *.ihx *.lnk *.lst *.map *.mem *.rel *.rst *.sym # remove these files with a 'make clean'
@@ -14,8 +14,7 @@ all:
 	@echo "Done."
 
 clean:	
-
-        for f in `ls $(CLEAN_THESE)`; do \
+	for f in `ls $(CLEAN_THESE)`; do \
 		rm $$f ; \
 	done ;
 	@echo "Cleaned"
