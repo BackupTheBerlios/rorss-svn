@@ -43,30 +43,30 @@ void stopALL(void);
 
 int main(void)
 {
-	setup_oscillator(OSC_4MHZ);
-	//INTCON |= 0xe8;//enable global/tmr0/IOCA interrupts
-	enable_interrupts(GLOBAL & INT_TIMER0 & INT_RA & INT_RA0 & INT_RA1);
+	//setup_oscillator(OSC_4MHZ);
+	INTCON |= 0xe8;//enable global/tmr0/IOCA interrupts
+	//enable_interrupts(GLOBAL & INT_TIMER0 & INT_RA & INT_RA0 & INT_RA1);
 	PIE1 |= 0x30;//enable TXIE and RCIE on PIE1 (p.29)
 	RCSTA |= 0x90;//enable serial port and continuous recieve enable bit
 
 	//up-down output bits are TRISC 0 and 1
 	//open-close output bits 2 and 3
-	//TRISC &= 0x0f;
-	set_tris_c(0x0f);
+	TRISC &= 0x0f;
+	//set_tris_c(0x0f);
 	//up-down input is TRISA 0
 	//open-close input is TRISA 1
-	//TRISA &= 0x03;
-	set_tris_a(0x0f);
+	TRISA &= 0x03;
+	//set_tris_a(0x0f);
 
 	//enable interrupt on change A
-	//IOCA &= 0x03;
+	IOCA &= 0x03;
 
-	//SYNC = 0;//clearing sync
+	SYNC = 0;//clearing sync
 	//assuming 4 mhz
-	//SPBRG = 2; //19200 baud
+	SPBRG = 2; //19200 baud
 
-	//SPEN = 1; //enabling serial port asynchronously (p.146)
-	//RCIE = 1;//enabling interrupts
+	SPEN = 1; //enabling serial port asynchronously (p.146)
+	RCIE = 1;//enabling interrupts
 
 	return 0;
 }
