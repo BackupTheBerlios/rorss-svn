@@ -2,7 +2,7 @@
 
 BIN = run_modules
 CC = sdcc
-CC_FLAGS = -I/usr/share -I./ -I../shared
+CC_FLAGS = -I/usr/share -I./ -I../
 LIBS =
 SOURCES = radio_relay.c
 CLEAN_THESE = *.asm *.ihx *.lnk *.lst *.map *.mem *.rel *.rst *.sym # remove these files with a 'make clean'
